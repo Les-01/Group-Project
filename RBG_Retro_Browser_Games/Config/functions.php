@@ -21,20 +21,19 @@ function check_login($con) // this is a function created to check login and work
 function navbar_check($con){
 
     
-    if ($_SESSION['Rank'] == 'User') 
+    if ($_SESSION['Tier'] == 'User') 
       {  
         include("Navbars/user_navbar.php");
       }
 
-  elseif($_SESSION['Rank'] == 'Admin')
+  elseif($_SESSION['Tier'] == 'Admin')
     {
       include("Navbars/admin_navbar.php");
     }
-    elseif($_SESSION['Rank'] == 'Tester')
+    elseif($_SESSION['Tier'] == 'Tester')
     {
       include("Navbars/test_navbar.php");
-    }
-      
+    }      
 
 }
 

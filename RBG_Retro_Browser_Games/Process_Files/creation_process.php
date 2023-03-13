@@ -9,40 +9,67 @@ session_start(); // This line starts the session and this will be included on ev
 
 
 
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == "POST") 
+
+{
     //This means something was posted.
     $Username = $_POST['Username']; // This creates a username variable which will provide the info from the user.
-    $User_Fname = $_POST['Fname'];
-    $User_Sname = $_POST['Sname'];
-    $User_Email = $_POST['Email'];
-    $User_Password = md5($_POST['Password']);
-    $User_Password2 = md5($_POST['Password2']);
-    
- if ($User_Password == $User_Password2){  
+    $Fname = $_POST['Fname'];
+    $Sname = $_POST['Sname'];
+    $Email = $_POST['Email'];
+    $Password = md5($_POST['Password']);
+    $Password2 = md5($_POST['Password2']);
 
-if (!empty($Username) && !empty($User_Email) && !empty($User_Password)) 
-    {
-               
-        //$query = "insert into user_tbl (Username, Email, Password) values ('$Username', '$User_Email', '$User_Password')";
-        $query = "INSERT INTO `user-tbl` (`User_ID`, `Username`, `Fname`, `Sname`, `Email`, `Rank`, `Password`) VALUES (NULL, '".$Username."', '".$User_Fname."', '".$User_Sname."', '".$User_Email."', 'User', '".$User_Password."')";
 
-        mysqli_query($con, $query);
-        //echo $query;
-        header("location: ../index.php");
+    $query = "SELECT * FROM `user_tbl` WHERE `Username` LIKE '".$Username."'"; // The backwards quotations are different to the usual ones, however these are selected from the button to the left of the 1 key on the keyboard.  This line is also creating a $sql variable
 
-        die;
+    $result = mysqli_query($con, $query); // memres = member result
 
-    } 
-    else
-    {
-        echo "failed!";
-        //header("location: ../Account/Account_Creation_Failed.php");
+    $row_count = $result ->num_rows;
+
+            if($row_count == 1)
+            {
+                //header('Location: ../error.php');
+            echo "$Username Already Exists! <br> Please Log in.";
         
-    }
-    
+                }
 
-    
-// echo $User_Name, $User_Fname, $User_Sname, $User_Cnumber,  $User_Town, $User_Email, $User_Pword;
+                elseif($row_count >=2)
+                {
+                    echo "!!WARNING!! Duplicate Accounts Held On Database.";
+                
+                }
+
+                        elseif($row_count == 0)
+                        {                
+                            
+                            if(!empty($Username) && !empty($Email) && !empty($Fname) && !empty($Sname) && !empty($Password) && !empty($Password2))
+                            {  
+
+                        if($Password == $Password2){
+                                    
+                                //$query = "insert into user_tbl (Username, Email, Password) values ('$Username', '$User_Email', '$User_Password')";
+                                $query = "INSERT INTO `user_tbl` (`User_ID`, `Username`, `Fname`, `Sname`, `Email`, `Gamer_Score`, `Tier`, `Password`) VALUES (NULL, '".$Username."', '".$Fname."', '".$Sname."', '".$Email."', '0', 'User', '".$Password."')";
+
+                                mysqli_query($con, $query);
+                                //echo $query;
+                                header("location: ../index.php");
+                                die;
+                                }
+
+                                else{
+                                    echo "Passwords don't match, please check and try again.";
+                                } 
+                                
+                                }
+                                else
+                                {
+                                        echo "Please populate ALL fields";
+                                            
+                                }
+                            }
+                            
 } 
-}   
+
+   
 ?>

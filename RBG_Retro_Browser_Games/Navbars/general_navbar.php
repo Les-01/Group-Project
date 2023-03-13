@@ -1,9 +1,9 @@
 <?php
 
 //I have removed the include files as at current there is no need for them to be in this file.
-// ********************* INCLUDE FILES ********************* 
+// ************************** INCLUDE FILES ************************** 
 include("modals.php");
-// ********************* INCLUDE FILES *********************
+// ************************** INCLUDE FILES **************************
 
 ?>
 
@@ -12,20 +12,17 @@ include("modals.php");
 
 <head>
   
-
-
-
 <!-- ************************** NAVBAR START ************************** -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+<nav class="reltive navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container">
       <a class="navbar-brand fs-3" href="/index.php"><strong>R.B.Gaming</strong></a>
 
-      <!-- ************** THIS IS THE HAMBURGER BUTTON ********** -->
+      <!-- ************** THIS IS THE HAMBURGER BUTTON ************** -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- ************* END OF HAMBURGER BUTTON *********** -->
+      <!-- ************** END OF HAMBURGER BUTTON ************** -->
 
       <div class="collapse navbar-collapse" id="navbarsExample07">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
@@ -33,7 +30,7 @@ include("modals.php");
             <a class="nav-link" aria-current="page" href="Account/sign_up.php"><b>Register</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gallery.php"><b>Gallery</b></a>
+            <a class="nav-link" href="../games.php"><b>Games</b></a>
           </li>
           <li class="nav-item">
             <a class="btn nav-link" data-bs-toggle="modal" data-bs-target="#login"><b>Sign In<b></a>
