@@ -8,21 +8,21 @@ include("../config/functions.php");
   
 if ($_SERVER['REQUEST_METHOD'] == "POST") 
 {
-    $Username = $_POST['uname'];   
-    $Email = $_POST['email'];
-    $Password = md5($_POST['password']);
-    $NewPword = md5($_POST['newpword']);
-    $NewPword2 = md5($_POST['newpword2']);
+    $User_Name = $_POST['Username'];   
+    $User_Email = $_POST['Email'];
+    $User_Fname = $_POST['Fname'];
+    $User_Pword = $_POST['Password'];
+    $User_Pword2 = md5($_POST['Password2']);
     
     
 
 
-    if (!empty($Username) && !empty($Email) && !empty($User_Fname) && !empty($Password) && !empty($NewPword) && !empty($NewPword2)) // This line here is checking that the fields aren't empty and ensuring the username doesn't contian numbers. '!' mens not. so the method '!empty($user_Name)' is saying field 'User_Name' is not empty.
+    if (!empty($User_Name) && !empty($User_Email) && !empty($User_Fname) && !empty($User_Pword) && !empty($User_Pword2)) // This line here is checking that the fields aren't empty and ensuring the username doesn't contian numbers. '!' mens not. so the method '!empty($user_Name)' is saying field 'User_Name' is not empty.
     {
-       if($NewPword == $NewPword2)
+       if($User_Pword == $User_Pword2)
        {// Read from database
 
-      $query = "select * from user_tbl where Username = '$Username' limit 1"; // This line will check from the table users on the database to see if they match with the username the user has input. The code is limited to only gather one username per attempt. 
+      $query = "select * from user_tbl where Username = '$User_Name' limit 1"; // This line will check from the table users on the database to see if they match with the username the user has input. The code is limited to only gather one username per attempt. 
 
        $result = mysqli_query($con, $query); // This line is using the variable 'result' which will hold the query gathered from the previous line of code.
 
@@ -32,11 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
           {
               $User_Data = mysqli_fetch_assoc($result); // This sline means that a new variable 'User Data' will gather the information from the database and store it to the 'result' variable.
               
-              if(($User_Data['Username'] === $Username) + ($User_Data['Password'] === $Password) + ($User_Data['Email'] === $Email))// This line is saying if the email gathered from the above query matches the one input by the user then run the below code otherwise skip this and move the the 'else' statement.
+              if($User_Data['Email'] === $User_Email) // This line is saying if the email gathered from the above query matches the one input by the user then run the below code otherwise skip this and move the the 'else' statement.
               {
 
                 
-                $query = "UPDATE `user_tbl` SET `Password` = '" . $NewPword . "'  WHERE `User_ID` LIKE '" .$User_Data['User_ID']. "'"; //This will update the DB at the location provided.
+                $query = "UPDATE `user_tbl` SET `Password` = '" . $User_Pword . "'  WHERE `Email` LIKE '" . $User_Email . "'"; //This will update the DB at the location provided.
                 //$result = $mysqli->query($sql);
 
         

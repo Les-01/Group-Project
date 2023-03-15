@@ -8,19 +8,14 @@ include("../config/functions.php");
   
 if ($_SERVER['REQUEST_METHOD'] == "POST") 
 {
-    $Username = $_POST['uname'];   
-    $Email = $_POST['email'];
-    $Password = md5($_POST['password']);
-    $NewPword = md5($_POST['newpword']);
-    $NewPword2 = md5($_POST['newpword2']);
-    
-    
+
+$Username = $_POST['uname'];
+$Password = $_POST['password'];
+$NewEmail = $_POST['new_email'];
 
 
-    if (!empty($Username) && !empty($Email) && !empty($User_Fname) && !empty($Password) && !empty($NewPword) && !empty($NewPword2)) // This line here is checking that the fields aren't empty and ensuring the username doesn't contian numbers. '!' mens not. so the method '!empty($user_Name)' is saying field 'User_Name' is not empty.
+if (!empty($Username) && !empty($NewEmail) && !empty($Password)) // This line here is checking that the fields aren't empty and ensuring the username doesn't contian numbers. '!' mens not. so the method '!empty($user_Name)' is saying field 'User_Name' is not empty.
     {
-       if($NewPword == $NewPword2)
-       {// Read from database
 
       $query = "select * from user_tbl where Username = '$Username' limit 1"; // This line will check from the table users on the database to see if they match with the username the user has input. The code is limited to only gather one username per attempt. 
 
@@ -32,11 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
           {
               $User_Data = mysqli_fetch_assoc($result); // This sline means that a new variable 'User Data' will gather the information from the database and store it to the 'result' variable.
               
-              if(($User_Data['Username'] === $Username) + ($User_Data['Password'] === $Password) + ($User_Data['Email'] === $Email))// This line is saying if the email gathered from the above query matches the one input by the user then run the below code otherwise skip this and move the the 'else' statement.
+              if(($User_Data['Username'] === $Username) + ($User_Data['Password'] === $Password)) // This line is saying if the email gathered from the above query matches the one input by the user then run the below code otherwise skip this and move the the 'else' statement.
               {
 
-                
-                $query = "UPDATE `user_tbl` SET `Password` = '" . $NewPword . "'  WHERE `User_ID` LIKE '" .$User_Data['User_ID']. "'"; //This will update the DB at the location provided.
+                $query = "UPDATE `user_tbl` SET `Username` = '" .$NewEmail. "'  WHERE `User_ID` LIKE '" .$User_Data['User_ID']. "'"; //This will update the DB at the location provided.
                 //$result = $mysqli->query($sql);
 
         
@@ -47,7 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
                 $_SESSION['User_Name'] = $User_Data['User_Name']; // This line is saying is the User ID gathered in session matches the user id that comes back from the user data then to run the below code.
                 $_SESSION['User_Pword'] = $User_Data['User_Pword']; // This line is saying is the User ID gathered in session matches the user id that comes back from the user data then to run the below code.*/
 
-                Echo "Success, your password has been updated!"; // This line will redirect the user to the index/home page if the above parameters are met.
+                //Echo "Success, your Username has been updated!"; // This line will redirect the user to the index/home page if the above parameters are met.
+                header('location:../profile.php');
                 die; // This line will kill the code and makes sure nothing bleeds over into any other pages.
               }
           }
@@ -62,11 +57,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
     else
     {
         
-        echo "Please populate each field!";
+        echo "Please populate all fields!";
         ?><br><button id="button5" onclick="history.back()">Go Back</button><?php
        
     }
-}
+
 
 
 ?>

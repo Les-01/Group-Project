@@ -10,11 +10,8 @@ include("modals.php");
 
 ?>
 
-
 <html lang="en" data-bs-theme="dark">    
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 
 <head>
 
@@ -36,7 +33,7 @@ include("modals.php");
             <a class="nav-link" aria-current="page" href="../profile.php"><B>Profile</B></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../gallery.php"><B>Gallery</B></a>
+            <a class="nav-link" href="../games.php"><B>Games</B></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Process_Files/logout.php"><B>Logout</B></a>
@@ -57,8 +54,8 @@ include("modals.php");
         <li class="nav-item dropdown">
            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><B>Admin Tools</B></a>
           <ul class="dropdown-menu">
-              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#update"><B>Update</B></a></li>
-              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#remove"><B>Remove</B></a></li>
+              <!-- <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#update"><B>Update</B></a></li> -->
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#remove"><B>Remove</B></a></li> 
               <li><a class="dropdown-item" href=../test_page.php><B>Test Page</B></a></li>
             </ul>
           </li> 
@@ -74,7 +71,9 @@ include("modals.php");
 
 <!-- ************* NAVBAR BANNER START *********** -->
 <div class="p-3 fs-1 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 text-center">
-  <b>Logged in as "<?php echo $_SESSION['Username']; ?>"</b>
+<b>Retro Browser Gaming</b>  
+<br>
+  <div class="fs-4">Logged in as: <b><?php echo $_SESSION['Username']; ?></b></div>
 </div>
 <!-- ************* NAVBAR BANNER END *********** -->
 
