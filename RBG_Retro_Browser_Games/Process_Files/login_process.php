@@ -9,10 +9,10 @@ include("../config/functions.php");
 if ($_SERVER['REQUEST_METHOD'] == "POST") 
 {
     $Username = $_POST['Username'];   
-    $User_Password = md5($_POST['Password']);
+    $Password = md5($_POST['Password']);
 
 
-    if (!empty($Username) && !empty($User_Password)) // This line here is checking that the fields aren't empty and ensuring the username doesn't contian numbers. '!' mens not. so the method '!empty($user_Name)' is saying field 'User_Name' is not empty.
+    if (!empty($Username) && !empty($Password)) // This line here is checking that the fields aren't empty and ensuring the username doesn't contian numbers. '!' mens not. so the method '!empty($user_Name)' is saying field 'User_Name' is not empty.
     {
        // Read from database
 
@@ -27,28 +27,27 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
           {
               $User_Data = mysqli_fetch_assoc($result); // This line means that a new variable 'User Data' will gather the information from the database and store it to the 'result' variable.
               
-              if($User_Data['Password'] === $User_Password) // This line is saying if the password gathered from the above query matches the one input by the user then run the below code otherwise skip this and move the the 'else' statement.
+              if($User_Data['Password'] === $Password) // This line is saying if the password gathered from the above query matches the one input by the user then run the below code otherwise skip this and move the the 'else' statement.
               {
                 $_SESSION['User_ID'] = $User_Data['User_ID']; 
                 $_SESSION['Username'] = $User_Data['Username']; 
                 $_SESSION['User_Password'] = $User_Data['Password'];
-                $_SESSION['Rank'] = $User_Data['Rank']; 
-                header("location: ../index2.php"); // This line will redirect the user to the index/home page if the above parameters are met.
+                $_SESSION['Tier'] = $User_Data['Tier']; 
+                header("location: ../index.php"); // This line will redirect the user to the index/home page if the above parameters are met.
                 die; // This line will kill the code and makes sure nothing bleeds over into any other pages.
               }
           }
        }
        
        echo "Error, username & password don't match";
-       
-          //header("location: ../Login/Login3_Failed.php"); // This line will redirect the user to the index/home page if the above parameters are met.
+       ?><br><button id="button5" onclick="history.back()">Go Back</button><?php
 
     } 
     else
     {
         echo "Error, username & password aren't populated";
-        //header("location: ../Login/Login3_Failed.php"); // This line will redirect the user to the index/home page if the above parameters are met.
-
+        ?><br><button id="button5" onclick="history.back()">Go Back</button><?php
+       
         
     }
 }
