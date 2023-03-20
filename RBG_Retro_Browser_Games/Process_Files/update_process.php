@@ -5,16 +5,6 @@ include("../config/conn.php");
 include("../config/functions.php"); 
 // ********************** INCLUDE FILES *********************
 
-//$varUserID = $_SESSION['User_ID'];
-//$varUsername = $_POST['Username'];
-//$varNewUsername = $_POST['NewUsername'];
-//$varFname = $_POST['NewFname'];
-//$varSname = $_POST['NewSname'];
-//$varEmail = $_POST['NewEmail'];
-//$varRank = $_POST['NewRank'];
-//$varPassword = $_POST['NewPassword'];
-
-
 
 // ********************** SELECT QUERY *********************
 

@@ -3,22 +3,22 @@
 session_start();
 
 // ********************* INCLUDE FILES ********************* 
-include("Config/conn.php");
+include ("Config/conn.php");
 include("Config/functions.php");
 // ********************* INCLUDE FILES *********************
 
-if(($User_Data = check_login($con)) == true) // Finally, I figured this out as I decided to use a boolean value.
+//$User_Data = check_login($con); // This line is checking that a user is logged in.
+
+if(($user_Data = check_login($con)) == true)
 {
 navbar_check($con);
-$_SESSION['Username'] = $User_Data['Username'];
-$_SESSION['Tier'] = $User_Data['Tier'];
 }
 else
 {
   include("Navbars/General_navbar.php");
 }
-
 ?>
+
 
 
 <!-- ********************* BOOTSTRAP ********************* -->
@@ -33,17 +33,12 @@ else
 <!-- ********************* MY CSS ********************* -->
 
 <head>
-
-
+  
 
 
 </head>
 
 <body>
-
-
-
-
 
 
 
