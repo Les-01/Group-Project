@@ -24,7 +24,7 @@ function main(currentTime) {
         // The 'confirm' method will produce the message within the parenthesis.
         // If the user clicks 'OK' the window will refresh and the game will start again.
         if (confirm('GAME OVER Play Again?')) {
-            window.location = '/group_project/snake/main.html'
+            window.location = '/Game/snake/main.html'
         }
         // If the user clicks cancel the return statement will stop the rest of the code from executing.
         return
