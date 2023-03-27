@@ -33,7 +33,7 @@ include("modals.php");
             <a class="nav-link" href="../games.php"><b>Games</b></a>
           </li>
           <li class="nav-item">
-            <a class="btn nav-link" data-bs-toggle="modal" data-bs-target="#login"><b>Sign In<b></a>
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#login"><b>Sign In</b></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><b>More</b></a>
@@ -57,18 +57,7 @@ include("modals.php");
 
 <!-- ************************** NAVBAR END ************************** -->
 
-<!-- ************************** BACKGROUND INCLUDE ************************** -->  
-<style>
-body {
-  
-  background-image: url('../images/index_bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
- 
-}
-</style>
-<!-- ************************** BACKGROUND INCLUDE ************************** -->
+
 
 
 </head>

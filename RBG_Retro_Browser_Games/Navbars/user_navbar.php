@@ -43,8 +43,8 @@ include("modals.php");
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><b>More</b></a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../about.php"><b>About</b></a></li>
-              <li><a class="dropdown-item" href="../faq.php"><b>FAQ</b></a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ABOUT"><b>About</b></a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#FAQ"><b>FAQ</b></a></li>
               <li><a class="dropdown-item" href="../contact_us.php"><b>Contact Us</b></a></li>
             </ul>
           </li>
@@ -64,9 +64,8 @@ include("modals.php");
 
 <!-- ************************** NAVBAR END ************************** -->
 
-<!-- ************************** BACKGROUND INCLUDE ************************** -->
-<?php include("Misc_Files/cityscape.php"); ?>
-<!-- ************************** BACKGROUND INCLUDE ************************** -->
+
+
 
 
 

@@ -3,10 +3,8 @@
 session_start();
 
 // ********************* INCLUDE FILES ********************* 
-include("Config/conn.php");
-include("Config/functions.php");
-//include("Misc_Files/liveBG.php");
-//include("Navbars/general_navbar.php");
+include("config/conn.php");
+include("config/functions.php");
 // ********************* INCLUDE FILES *********************
 
 if(($User_Data = check_login($con)) == true)
@@ -17,8 +15,10 @@ $_SESSION['Tier'] = $User_Data['Tier'];
 }
 else
 {
-  include("Navbars/General_navbar.php");
+  include("Navbars/general_navbar.php");
 }
+
+bg_check($con);
 
 ?>
 

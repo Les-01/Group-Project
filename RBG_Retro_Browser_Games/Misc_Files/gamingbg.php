@@ -1,12 +1,12 @@
-<!-- ************************** CSS & JS INCLUDES ************************** -->
-<link rel="stylesheet" href="css/gamingbg.css"> 
-<script src="js/gamingbg.js"></script>
-<!-- ************************** CSS & JS INCLUDES ************************** -->
+<!-- ********************* MY CSS ********************* -->
 
+<link rel="stylesheet" href="../css/gamingbg.css">
 
-<div id="retrobg" style="z-index: -1">
-  <div id="retrobg-sky" style="z-index: -1">
-    <div id="retrobg-stars" style="z-index: -1">
+<!-- ********************* MY CSS ********************* -->
+
+<div id="retrobg">
+  <div id="retrobg-sky">
+    <div id="retrobg-stars">
       <div class="retrobg-star" style="left:  5%; top: 55%; transform: scale( 2 );"></div>
       <div class="retrobg-star" style="left:  7%; top:  5%; transform: scale( 2 );"></div>
       <div class="retrobg-star" style="left: 10%; top: 45%; transform: scale( 1 );"></div>
@@ -29,15 +29,15 @@
       <div class="retrobg-star" style="left: 96%; top: 72%; transform: scale( 1 );"></div>
       <div class="retrobg-star" style="left: 98%; top: 70%; transform: scale( 3 );"></div>
     </div>
-    <div id="retrobg-sunWrap" style="z-index: -1">
-      <div id="retrobg-sun" style="z-index: -1"></div>
+    <div id="retrobg-sunWrap">
+      <div id="retrobg-sun"></div>
     </div>
-    <div id="retrobg-mountains" style="z-index: -1">
-      <div id="retrobg-mountains-left" class="retrobg-mountain" style="z-index: -1"></div>
-      <div id="retrobg-mountains-right" class="retrobg-mountain" style="z-index: -1"></div>
+    <div id="retrobg-mountains">
+      <div id="retrobg-mountains-left" class="retrobg-mountain"></div>
+      <div id="retrobg-mountains-right" class="retrobg-mountain"></div>
     </div>
-    <div id="retrobg-cityWrap" style="z-index: -1">
-      <div id="retrobg-city" style="z-index: -1">
+    <div id="retrobg-cityWrap">
+      <div id="retrobg-city">
         <div style="left:  4.0%; height: 20%; width: 3.0%;" class="retrobg-building"></div>
         <div style="left:  6.0%; height: 50%; width: 1.5%;" class="retrobg-building"></div>
         <div style="left:  8.0%; height: 25%; width: 4.0%;" class="retrobg-building"></div>
@@ -76,10 +76,10 @@
       </div>
     </div>
   </div>
-  <div id="retrobg-ground" style="z-index: -1">
-    <div id="retrobg-linesWrap" style="z-index: -1">
-      <div id="retrobg-lines" style="z-index: -1">
-        <div id="retrobg-vlines" style="z-index: -1">
+  <div id="retrobg-ground">
+    <div id="retrobg-linesWrap">
+      <div id="retrobg-lines">
+        <div id="retrobg-vlines">
           <div class="retrobg-vline"></div>
           <div class="retrobg-vline"></div>
           <div class="retrobg-vline"></div>
@@ -146,7 +146,8 @@
         </div>
       </div>
     </div>
-    <div id="retrobg-groundShadow" style="z-index: -1"></div>
+    <div id="retrobg-groundShadow"></div>
   </div>
 <div>
 
+<script src="../js/gamingbg.js"></script>

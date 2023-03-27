@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 14, 2023 at 08:50 PM
+-- Generation Time: Mar 20, 2023 at 09:33 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -34,14 +34,15 @@ CREATE TABLE IF NOT EXISTS `image_tbl` (
   `Image_Dir` varchar(50) NOT NULL,
   `User_ID` int(10) NOT NULL,
   PRIMARY KEY (`Image_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=hp8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=hp8;
 
 --
 -- Dumping data for table `image_tbl`
 --
 
 INSERT INTO `image_tbl` (`Image_ID`, `Image_Title`, `Image_Dir`, `User_ID`) VALUES
-(1, 'BLACK BLOCKS', '../Images/3d-black-cube-4r-2560x1440.jpg', 5);
+(14, 'ME', '../Images/Me.jpg', 10),
+(9, 'OLLIE', '../Images/Ollie.jpg', 5);
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `user_tbl` (
   `Tier` text NOT NULL,
   `Password` varchar(50) NOT NULL,
   PRIMARY KEY (`User_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=hp8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=hp8;
 
 --
 -- Dumping data for table `user_tbl`
@@ -71,8 +72,9 @@ INSERT INTO `user_tbl` (`User_ID`, `Username`, `Fname`, `Sname`, `Email`, `Gamer
 (2, 'Donny', 'Donald', 'Duck', 'donny@support.com', '0', 'User', '202cb962ac59075b964b07152d234b70'),
 (5, 'Tester', 'Tester', 'Tester', 'Tester@support.com', '10', 'Tester', '4a7d1ed414474e4033ac29ccb8653d9b'),
 (6, 'Admin', 'Admin', 'Tester', 'admin@support.com', 'MAX', 'Admin', '4a7d1ed414474e4033ac29ccb8653d9b'),
-(10, 'User', 'User', 'Tester', 'user@support.com', '101', 'User', '4a7d1ed414474e4033ac29ccb8653d9b'),
-(15, 'Roccat', 'MK', 'Pro', 'roccat@mkpro.com', '0', 'User', '202cb962ac59075b964b07152d234b70');
+(10, 'Skuddz', 'Charles', 'Skudder', 'skudds@support.com', '101', 'User', '4a7d1ed414474e4033ac29ccb8653d9b'),
+(15, 'Roccat', 'MK', 'Pro', 'roccat@mkpro.com', '0', 'User', '202cb962ac59075b964b07152d234b70'),
+(16, 'User', 'User', 'User', 'user@support.com', '0', 'User', '4a7d1ed414474e4033ac29ccb8653d9b');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

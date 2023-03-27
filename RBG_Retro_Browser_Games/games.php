@@ -3,8 +3,8 @@
 session_start();
 
 // ********************* INCLUDE FILES ********************* 
-include("Config/conn.php");
-include("Config/functions.php");
+include("config/conn.php");
+include("config/functions.php");
 // ********************* INCLUDE FILES *********************
 
 if(($User_Data = check_login($con)) == true)
@@ -15,8 +15,10 @@ $_SESSION['Tier'] = $User_Data['Tier'];
 }
 else
 {
-  include("Navbars/General_navbar.php");
+  include("Navbars/general_navbar.php");
 }
+
+bg_check2($con);
 
 ?>
 
@@ -44,24 +46,25 @@ else
 
 	<div class="col gy-2">
 		<div class="shadow-lg p-3 mb-5 bg-body rounded"> <!-- bg is for background -->
-			<img id="placeholder-img" class="card-img-top w-100 h-30" src="images/placeholder.jpg" alt="Placeholder">
+			<img id="snake_thumb.jpg" class="card-img-top w-100 h-30" src="images/snake_thumb.jpg" alt="Placeholder">
 
-			<div id="GameX" class="card-body text-center">
-				<h5 class="card-title"><b>Game Name</b></h5>
-				<p id="GameX-text" class="card-text">This game is an old classic blah blah blahh Click play to have a go!</p>
-				<a href="#" id=GameX class="btn btn-info">Play</a>
+			<div id="Snake" class="card-body text-center">
+				<h5 class="card-title"><b>SNAKE</b></h5>
+				<p id="Snake-text" class="card-text">This game is an old classic, eat all the food, don't hit the walls or yourself... Good luck! 
+					<br> Click play to have a go!</p>
+				<a href="Games/snake/main.html" id=Snake class="btn btn-info">Play</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="col gy-2">
 		<div class="shadow-lg p-3 mb-5 bg-body rounded">
-			<img id="GameX-img" class="card-img-top w-100 h-30" src="images/placeholder.jpg" alt="Placeholder">
+			<img id="noughts_thumb.jpg" class="card-img-top w-100 h-30" src="images/noughts_n_crosses.jpg" alt="Placeholder">
 
 			<div id="GameX" class="card-body text-center">
-				<h5 class="card-title"><b>Game Name</b></h5>
-				<p id="GameX-text" class="card-text">This game is an old classic blah blah blahh Click play to have a go!</p>
-				<a href="#" id=GameX class="btn btn-info">Play</a>
+				<h5 class="card-title"><b>Noughts & Crosses</b></h5>
+				<p id="GameX-text" class="card-text">This game is good ol' Noughts & Crosses, or as some may know it 'Tic-Tac-Toe'!! Grab a friend and see who wins...</p>
+				<a href="Games/noughts_and_crosses/index.html" id=noughts_and_crosses class="btn btn-info">Play</a>
 			</div>
 		</div>
 	</div>

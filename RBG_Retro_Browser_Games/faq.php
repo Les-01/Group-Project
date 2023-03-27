@@ -3,10 +3,8 @@
 session_start();
 
 // ********************* INCLUDE FILES ********************* 
-include("Config/conn.php");
-include("Config/functions.php");
-//include("Misc_Files/liveBG.php");
-//include("Navbars/general_navbar.php");
+include("config/conn.php");
+include("config/functions.php");
 // ********************* INCLUDE FILES *********************
 
 //$User_Data = check_login($con);
@@ -17,8 +15,10 @@ $_SESSION['Username'] = $User_Data['Username'];
 }
 else
 {
-  include("Navbars/General_navbar.php");
+  include("Navbars/general_navbar.php");
 }
+
+bg_check($con);
 
 ?>
 

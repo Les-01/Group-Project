@@ -3,8 +3,8 @@
 session_start();
 
 // ********************* INCLUDE FILES ********************* 
-include("Config/conn.php");
-include("Config/functions.php");
+include("config/conn.php");
+include("config/functions.php");
 // ********************* INCLUDE FILES *********************
 
 if(($User_Data = check_login($con)) == true)

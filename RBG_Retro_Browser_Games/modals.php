@@ -395,14 +395,82 @@
 <!-- ********************* IMAGE UPLOAD MODAL END ********************* -->
 
 
-<!-- <form action="Process_Files/Img_Upload_Process.php" method="post" enctype="multipart/form-data">  This process will not work with the 'Get' method -->
-              
-       <!-- This line adds a field for the user to enter the name of the file they are uploading to the server. 
-      Please select the image you wish to upload:
+<!-- ************************** FAQ - COMING SOON ************************** -->
+<div class="modal fade" id="FAQ" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="align-items: center; text-center"> <h1>FAQ - COMING SOON</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- btn-close makes a cross and bootstrap knows where to put it within the div. data-bs-dismiss will dismiss the modal -->
+            </div>
+<div class="bgimg">
+  <div class="middle  bg-info-subtle border border-primary-subtle rounded-3 text-center">
+    
+    <h3>Work In Progress! <br> Available Soon</h3>
+    <p>We need to go over these questions, change and add some.</p>
+    <ul style="text-align: left;">
+      <li>Q: Why should I sign up to this website? </li>
+      <li>A: So you can play games on your browser...for FREE! </li><br>
+      <li>Q: How do I sign up? </li>
+      <li>A: Click the 'Register' button along the top navigation bar. </li><br>
+      <li>Q: How do I change my profile picture? </li>
+      <li>A: Just simply click on your image when on the 'Profile' page. </li><br>  
+      <li>Q: How did you come up with the idea for this site?</li>
+      <li>A: blah blah </li><br>
+      <li>Q: What does this website have to offer?</li>
+      <li>A: blah blah </li><br>
+      <li>Q: How do I update my details? </li>
+      <li>A: blah blah </li><br>
+      <li>Q: What does the 'Gamer Score' get calculated? </li>
+      <li>A: blah blah </li><br>
+      <li>Q: Will more games be added? </li>
+      <li>A: Short answer, YES! However, it DOES take time to write the code for these games and then intergrate it into the website.</li><br>
       
-      <button id="button5" onclick="history.back()">Go Back</button>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- ************************** FAQ - COMING SOON ************************** -->
+  
+  
+  
+ <!-- ************************** ABOUT - COMING SOON ************************** -->
+<div class="modal fade" id="ABOUT" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" style="align-text: center; text-center">
+            <div class="modal-header"><h1>ABOUT - COMING SOON</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- btn-close makes a cross and bootstrap knows where to put it within the div. data-bs-dismiss will dismiss the modal -->
+            </div>
 
-  </form> -->
+<div class="bgimg">
+  <div class="middle  bg-info-subtle border border-primary-subtle rounded-3 text-center">
+    
+    <h2>Under construction <br> Available in a few weeks</h2>
+    <p>
+      This website is a joint collaboration between Charles Skudder and Les Grint. <br>
+      We have worked tirelessly to bring this website together and to bring you, <br>
+      the user a great entertainment platform for gaming. It doesn't matter where you are, who you are, or what you are, so long as you have an internet connection we're sure you'll find a game that you'll enjoy! <br>
+      If you don't, then feel free to reach out to us with your suggestions and we will endeavour to try our best! <br>
+      If you encounter any issues, bugs, or have questions, be sure to check out our FAQ page <a href="faq.php">HERE</a> as we may have already answered your question.
+      If we haven't then let us know via the <a href="contact_us.php">Contact Us</a> page.
+      <br>
+      Click the 'Games' tab on the navigation bar to browse the games already available, alternatively just click <a href="games.php">here</a>.<br>
+      Happy gaming! <br><br>  
+      Still to come:<br> 
+      <ul>
+         <li> A scoreboard - (so we can have a leaderboard which will allow our users to see where they rank based on their skill points earned <br> by playing the games)</li>
+         <li> A Chat page - (a place that users can come together and share gaming tips and help each other to reach higher scores)</li>
+         <li> New games - (We are currently looking into a first person shooter style game)</li>
+      </ul>
+      <br> 
+    </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- ************************** ABOUT - COMING SOON ************************** -->
 
 
 

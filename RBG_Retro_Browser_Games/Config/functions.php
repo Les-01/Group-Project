@@ -114,6 +114,42 @@ function user_image($con)
 
 // ******************************** PROFILE USER IMAGE2 (Working!) ********************************
 
+// ******************************** BG SELECTOR ********************************
+// The below code doesn't seem to work right now I keep getting the following error message on the index page 'assigning "void" from a function navbar_check()'
+function bg_check($con)
+{
+
+    
+    if(isset($_SESSION['User_ID'])) 
+      { 
+        include("Misc_Files/gamingbg.php"); 
+      }
+  else
+    {
+      include("Misc_Files/static_cityscape.php");
+    }
+    
+}
+// ******************************** BG SELECTOR ********************************
+
+
+// ******************************** BG2 SELECTOR ********************************
+// The below code doesn't seem to work right now I keep getting the following error message on the index page 'assigning "void" from a function navbar_check()'
+function bg_check2($con)
+{
+
+    
+    if(isset($_SESSION['User_ID'])) 
+      { 
+        include("Misc_Files/cityscape.php"); 
+      }
+  else
+    {
+      include("Misc_Files/static_cityscape.php");
+    }
+    
+}
+// ******************************** BG SELECTOR ********************************
 
 
 

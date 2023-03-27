@@ -3,8 +3,8 @@
 session_start();
 
 // ********************* INCLUDE FILES ********************* 
-include("Config/conn.php");
-include("Config/functions.php");
+include("config/conn.php");
+include("config/functions.php");
 // ********************* INCLUDE FILES *********************
 
 if(($User_Data = check_login($con)) == true)
@@ -15,9 +15,10 @@ $varUserID = $User_Data['User_ID'];
 }
 else
 {
-  include("Navbars/General_navbar.php");
+  include("Navbars/general_navbar.php");
 }
 
+bg_check($conn);
 
 ?>
 
@@ -35,8 +36,9 @@ else
 
 <body>
 <br><br>
-<div class="card">
-<div class="container g-5 text-center">
+<div class="d-flex p-2 bd-highlight justify-content-center">
+  <div class="card">
+<div class="container g-5 text-center" style="color: #a3c;>
 <br>
 <div class="user_image">  
   <?php User_Image($con); ?> <!-- This is a function I created to slim down the amount of code required on the page -->
@@ -47,7 +49,7 @@ else
     
   <div class="container">
     <div class="box g-5 text-center fs-4">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">  
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="color: #a3c;>  
         
         <br>
         <li>
@@ -70,6 +72,7 @@ else
       </ul>
     </div>
   </div>
+</div>
 </div>
 </div>
 <br><br><br><br><br>
