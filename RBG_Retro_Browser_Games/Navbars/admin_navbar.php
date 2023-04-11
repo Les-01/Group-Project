@@ -19,7 +19,7 @@ include("modals.php");
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
     <div class="container">
-      <a class="navbar-brand fs-3" href="../index2.php"><strong>R.B.Gaming (Admin) </strong></a>
+      <a class="navbar-brand fs-3" href="index.php"><strong>R.B.Gaming (Admin) </strong></a>
 
       <!-- ************** THIS IS THE HAMBURGER BUTTON ********** -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +34,9 @@ include("modals.php");
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../games.php"><B>Games</B></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="highscores.php"><B>Highscores</B></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Process_Files/logout.php"><B>Logout</B></a>
