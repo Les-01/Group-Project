@@ -23,11 +23,15 @@ const gameBoard = document.getElementById('game-board')
 function main(currentTime) {
     // If the variable 'gameOver' equals true execute the code within the statement.
     if (gameOver) {
+        // This creates a cookie and stores the users score in it
+        document.cookie = "game_score="+score;
+        // This navigates the user to the page 'score.php'
+        window.location = 'snake_score.php'
         // The 'confirm' method will produce the message within the parenthesis.
         // If the user clicks 'OK' the window will refresh and the game will start again.
-        if (confirm('Game Over\nScore = ' + score +'\nPlay Again?')) {
-            window.location = '/group_project/snake/main.html'
-        }
+        //if (confirm('Game Over\nScore = ' + score +'\nPlay Again?')) {
+            //window.location = '/group_project/snake/main.html'
+        //}
         // If the user clicks cancel the return statement will stop the rest of the code from executing.
         return
         // window.location = '/add the main website page here
