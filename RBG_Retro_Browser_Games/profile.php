@@ -18,7 +18,7 @@ else
   include("Navbars/general_navbar.php");
 }
 
-bg_check($conn);
+bg_check($con);
 
 ?>
 
