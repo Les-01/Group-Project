@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        /*--  This is the CSS for the body. It sets the game board and all content to the center of the browser window,
+        removes all margins and sets the background behind the game board to black  --*/
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: black;
+        }
+
+        /*--  This is the CSS for the game board. It sets background colour to light grey and sets the width to 100vmin. VMIN stands for 
+        "view point minimum" which sets the size of the game board as a percentage of the minimum value of either the height or width. 
+        In this case 100% of the value of either the height or width depending on which is smaller. This makes the game boards height and width
+        relative to the size of the window it's being displayed on.  
+        The game board display is then set to 'grid' and defines both the parameters of both the rows and columns.  --*/
+        #game-board {
+            background-color: #ccc;
+            width: 100vmin;
+            height: 100vmin;
+            display: grid;
+            grid-template-rows: repeat(21, 1fr);
+            grid-template-columns: repeat(21, 1fr);
+        }
+
+        /*--  This is the CSS for the snake, it sets the snake colour to blue, sets the border surrounding the snake to black and sets the borders 
+        size to relative using vmin--*/
+        .snake {
+            background-color: hsl(200, 100%, 50%);
+            border: .25vmin solid black;            
+        }
+
+        /*--  This is the CSS for the food, it sets the food colour to yellow, sets the border surrounding the food to black and sets the borders 
+        size to relative using vmin--*/
+        .food {
+            background-color: hsl(50, 100%, 50%); 
+            border: .25vmin solid black;            
+        }
+    </style>
+
+    <!--  This imports the javascript file "game.js", it defers it to load after the body.  -->
+    <script src="game.js" defer type="module"></script>
+
+</head>
+<body>
+    <!--  This creates the div "game-board" which will be the area the game is played in.  -->
+    <div id="game-board"></div>    
+</body>
+</html>
