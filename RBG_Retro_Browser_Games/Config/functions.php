@@ -151,15 +151,19 @@ function bg_check2($con)
 }
 // ******************************** BG SELECTOR ********************************
 
-
-
-
-
-
-
-
-
-
-
-
+ //--------------------  This is the function 'saveUserScore'  --------------------
+    // The variables in the parenthesis are passed to the function
+    function saveUserScore($con, $varuName, $varScore, $varGameId, $varUserId)
+    { 
+        // SQL INSERT INTO statement to insert the values stored in the variables into the 'rbg_retro_browser_gaming' database table 'highscore_tbl' into the specified fields.
+        $sql = "INSERT INTO `rbg_retro_browser_gaming`.`highscore_tbl` (`score_id`, `score`, `user_name`, `User_ID`, `game_id`) 
+        VALUES (NULL, '".$varScore."' , '".$varuName."', '".$varUserId."', '".$varGameId."')";     
+        // This passes the variables $conn and $sql to the the function 'mysqli_query'.
+        mysqli_query ($con, $sql);
+        // This redirects to the 'highscores.php'.
+        header("location: ../..//highscores.php"); 	
+        
+        // This ends the process stopping the script from running.    
+        exit();
+    }
 ?>
