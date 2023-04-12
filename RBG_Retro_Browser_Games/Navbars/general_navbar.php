@@ -30,7 +30,7 @@ include("modals.php");
             <a class="nav-link" aria-current="page" href="Account/sign_up.php"><b>Register</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../games.php"><b>Games</b></a>
+            <a class="nav-link" href="games.php"><b>Games</b></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="highscores.php"><B>Highscores</B></a>

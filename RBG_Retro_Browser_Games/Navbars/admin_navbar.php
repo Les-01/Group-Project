@@ -30,10 +30,10 @@ include("modals.php");
       <div class="collapse navbar-collapse" id="navbarsExample07">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../profile.php"><B>Profile</B></a>
+            <a class="nav-link" aria-current="page" href="profile.php"><B>Profile</B></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../games.php"><B>Games</B></a>
+            <a class="nav-link" href="games.php"><B>Games</B></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="highscores.php"><B>Highscores</B></a>

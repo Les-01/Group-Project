@@ -17,8 +17,8 @@ session_start();
         $varGameId = $_SESSION['game_id'];
         $varUserId = $_SESSION['User_ID']; 
 
-        //--------------------  Reference to 'saveUserScore' function on 'functions.php'  --------------------
-        saveUserScore($con, $varuName, $varScore, $varGameId, $varUserId);  
+        //--------------------  Reference to 'saveSnakeUserScore' function on 'functions.php'  --------------------
+        saveSnakeUserScore($con, $varuName, $varScore, $varGameId, $varUserId);  
     } 
     
     // If the user gained access to this page without using the submit button execute the code within the 'ELSE' statement.

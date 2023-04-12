@@ -46,6 +46,7 @@ bg_check2($con);
 		border-radius: 1em;		
 }	
 
+ 
 </style>
 <!-- ********************* MY CSS ********************* -->
 
@@ -58,118 +59,107 @@ bg_check2($con);
     <div class="high_main">		
         <div class="wrapper">     
             <h1 style="text-align: center; color: black; font-weight: bold; text-decoration: underline;">Snake Highscores</h1>
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-dark table-sm">
+                <!--------------------  HTML Table Column Headings  -------------------->
                 <thead>
                     <tr>
-                        <th style="color: black; font-weight: bold;" scope="col">Place</th>
                         <th style="color: black; font-weight: bold;" scope="col">Username</th>
                         <th style="color: black; font-weight: bold;" scope="col">Score</th>
                     </tr>
                 </thead>
+                <!--------------------  HTML Table Body  -------------------->                
                 <tbody>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">1st</th>
-                        <td style="color: black;">Mark</td>
-                        <td style="color: black;">Otto</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">2nd</th>
-                        <td style="color: black;">Jacob</td>
-                        <td style="color: black;">Thornton</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">3rd</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">4th</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">5th</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
+                        <?php
+                            // SQL SELECT statement to select fld_member_id, fld_first_name, and fld_last_name from the members table, fld_image_points and 'SUM(fld_image_points)' from the images table, 
+                            // in descending order by  SUM(fld_image_points), grouping the results by member ID.
+
+                            $sql = "SELECT `score`, `user_name` FROM `snake_highscore_tbl` WHERE `game_id` LIKE '1' ORDER BY `score` ASC LIMIT 10";
+        	                // This passes the variables $conn and $sql to the the function 'mysqli_query' and assigns the result of the query to the variable '$result'.
+                            $result = mysqli_query($con, $sql);
+                            // This 'IF' statement declares that if the value of the variable '$result' and the number of rows is greater than zero execute the code within the statement. 
+                            if ($result && mysqli_num_rows($result) > 0) 
+                            {
+                                // This 'While' loop fetches the associative array for the value of the variable '$result' and assigns its value to the variable '$rows'.
+                                while ($row = mysqli_fetch_assoc($result)) 
+                                {     
+                                    // This echoes the HTML table containing the varaibles '$row["fld_member_id"]', '$row["fld_first_name"]', '$row["fld_last_name"]' and '$row["SUM(fld_image_points)"]'on each row.
+                                    echo "<tr>
+                                            <td>" . $row["user_name"] . "</td>
+                                            <td>" . $row["score"] . "</td>                                                                                                           
+                                        </tr>";
+                                }
+                            }
+                        ?>                    
                 </tbody>
             </table>        
         <br>    
         <br>         
+
+
             <h1 style="text-align: center; color: black; font-weight: bold; text-decoration: underline;">Noughts & Crosses Highscores</h1>
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-dark table-sm">
                 <thead>
                     <tr>
-                        <th style="color: black; font-weight: bold;" scope="col">Place</th>
                         <th style="color: black; font-weight: bold;" scope="col">Username</th>
-                        <th style="color: black; font-weight: bold;" scope="col">Score</th>
+                        <th style="color: black; font-weight: bold;" scope="col">Time</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">1st</th>
-                        <td style="color: black;">Mark</td>
-                        <td style="color: black;">Otto</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">2nd</th>
-                        <td style="color: black;">Jacob</td>
-                        <td style="color: black;">Thornton</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">3rd</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">4th</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">5th</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
+                        <?php
+                            // SQL SELECT statement to select fld_member_id, fld_first_name, and fld_last_name from the members table, fld_image_points and 'SUM(fld_image_points)' from the images table, 
+                            // in descending order by  SUM(fld_image_points), grouping the results by member ID.
+
+                            $sql = "SELECT `score`, `user_name` FROM `highscore_tbl` WHERE `game_id` LIKE '2' ORDER BY `score` DESC LIMIT 10";
+        	                // This passes the variables $conn and $sql to the the function 'mysqli_query' and assigns the result of the query to the variable '$result'.
+                            $result = mysqli_query($con, $sql);
+                            // This 'IF' statement declares that if the value of the variable '$result' and the number of rows is greater than zero execute the code within the statement. 
+                            if ($result && mysqli_num_rows($result) > 0) 
+                            {
+                                // This 'While' loop fetches the associative array for the value of the variable '$result' and assigns its value to the variable '$rows'.
+                                while ($row = mysqli_fetch_assoc($result)) 
+                                {     
+                                    // This echoes the HTML table containing the varaibles '$row["fld_member_id"]', '$row["fld_first_name"]', '$row["fld_last_name"]' and '$row["SUM(fld_image_points)"]'on each row.
+                                    echo "<tr>
+                                            <td>" . $row["user_name"] . "</td>
+                                            <td>" . $row["score"] . "</td>                                                                                                           
+                                        </tr>";
+                                }
+                            }
+                        ?>                    
                 </tbody>
             </table>
             <br>    
             <br> 
             <h1 style="text-align: center; color: black; font-weight: bold; text-decoration: underline;">The Maze Highscores</h1>
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-dark table-sm">
                 <thead>
                     <tr>
-                        <th style="color: black; font-weight: bold;" scope="col">Place</th>
                         <th style="color: black; font-weight: bold;" scope="col">Username</th>
                         <th style="color: black; font-weight: bold;" scope="col">Score</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">1st</th>
-                        <td style="color: black;">Mark</td>
-                        <td style="color: black;">Otto</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">2nd</th>
-                        <td style="color: black;">Jacob</td>
-                        <td style="color: black;">Thornton</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">3rd</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">4th</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
-                    <tr>
-                        <th style="color: black; font-weight: bold;" scope="row">5th</th>
-                        <td style="color: black;">Larry</td>
-                        <td style="color: black;">the Bird</td>
-                    </tr>
+                        <?php
+                            // SQL SELECT statement to select fld_member_id, fld_first_name, and fld_last_name from the members table, fld_image_points and 'SUM(fld_image_points)' from the images table, 
+                            // in descending order by  SUM(fld_image_points), grouping the results by member ID.
+
+                            $sql = "SELECT `score`, `user_name` FROM `highscore_tbl` WHERE `game_id` LIKE '2' ORDER BY `score` DESC LIMIT 10";
+        	                // This passes the variables $conn and $sql to the the function 'mysqli_query' and assigns the result of the query to the variable '$result'.
+                            $result = mysqli_query($con, $sql);
+                            // This 'IF' statement declares that if the value of the variable '$result' and the number of rows is greater than zero execute the code within the statement. 
+                            if ($result && mysqli_num_rows($result) > 0) 
+                            {
+                                // This 'While' loop fetches the associative array for the value of the variable '$result' and assigns its value to the variable '$rows'.
+                                while ($row = mysqli_fetch_assoc($result)) 
+                                {     
+                                    // This echoes the HTML table containing the varaibles '$row["fld_member_id"]', '$row["fld_first_name"]', '$row["fld_last_name"]' and '$row["SUM(fld_image_points)"]'on each row.
+                                    echo "<tr>
+                                            <td>" . $row["user_name"] . "</td>
+                                            <td>" . $row["score"] . "</td>                                                                                                           
+                                        </tr>";
+                                }
+                            }
+                        ?>                    
                 </tbody>
             </table>
             <br>    

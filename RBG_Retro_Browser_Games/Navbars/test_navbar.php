@@ -25,7 +25,7 @@ include("modals.php");
             <a class="nav-link" aria-current="page" href="../profile.php"><B>Profile</B></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../games.php"><B>Games</B></a>
+            <a class="nav-link" href="games.php"><B>Games</B></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="highscores.php"><B>Highscores</B></a>
