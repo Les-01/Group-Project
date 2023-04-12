@@ -89,8 +89,14 @@ window.addEventListener('DOMContentLoaded', () => {
         if (roundWon) {
             // Here the announce method acting as a function will announce the winner of the game either 'Player X' or 'Player O' based on the value of 'currentPlayer'.
             announce(currentPlayer === 'X' ? PLAYER_X_WON : PLAYER_O_WON);
-            // This assigns the value of 'false' to the variable 'isGameActive'
+            // This creates a cookie and stores the the value of the variable 'Min' in it
+            document.cookie = "minutes="+Min;
+             // This creates a cookie and stores the the value of the variable 'Sec' in it
+             document.cookie = "seconds="+Sec;
+             // This assigns the value of 'false' to the variable 'isGameActive'
             isGameActive = false;
+            // This navigates the user to the page 'noughts_and_crosses_score.php'
+             window.location = 'noughts_and_crosses_score.php';          
             // This ends the functions and stops executing the scripts
             return;
         }
