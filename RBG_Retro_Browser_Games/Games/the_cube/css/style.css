@@ -1,0 +1,182 @@
+body 
+{
+    background-color: #12181B;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-
+    serif;
+}
+
+div 
+{
+    width: 1200px;
+    margin: 5em auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 1em;
+}
+
+a:link, a:visited 
+{
+color: #38488f;
+text-decoration: none;
+}
+
+@media (max-width: 700px) 
+{
+    body
+    {
+        background-color: #fff;
+    }
+
+    div 
+    {
+        width: auto;
+        margin: 0 auto;
+        border-radius: 0;
+        padding: 1em;
+    }
+}
+
+h1 
+{
+    text-align: center;
+}
+
+p {
+    text-align: center;
+  }
+
+img 
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.play_button_div 
+{
+    display: flex;
+	justify-content: center;
+    background-color: #12181B;
+    width: 1000px;
+}
+
+.black_play_button {
+    background-color: #000000; /* Black */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.blue_play_button {
+    background-color: #0145ff; /* Blue */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.green_play_button {
+    background-color: #00ff00; /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.navy_blue_play_button {
+    background-color: #0c00ba; /* Navy Blue */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.orange_play_button {
+    background-color: #ff7300; /* Orange */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.red_play_button {
+    background-color: #ff0000; /* Red */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.white_play_button {
+    background-color: #ffffff; /* White */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.yellow_play_button {
+    background-color: #e5ff00; /* Yellow */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.quit_button
+{
+    background-color: #f10b0b; /* Red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px 10px 100px;
+    cursor: pointer;
+}

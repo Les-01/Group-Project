@@ -87,12 +87,12 @@ bg_check2($con);
 
 	<div class="col gy-2">
 		<div class="shadow-lg p-3 mb-5 bg-body rounded">
-			<img id="GameX-img" class="card-img-top w-100 h-30" src="images/maze_main.png" alt="Placeholder">
+			<img id="GameX-img" class="card-img-top w-100 h-30" src="Games/the_cube/images/cube_2.png" alt="Placeholder">
 
 			<div id="GameX" class="card-body text-center">
-				<h5 class="card-title"><b>The Maze</b></h5>
-				<p id="GameX-text" class="card-text">Can you escape the maze WILL CHANGE THIS IMAGE</p>
-				<a href="Games/the_maze/index.html" id=the_maze class="btn btn-info">Play</a>
+				<h5 class="card-title"><b>The Cube</b></h5>
+				<p id="GameX-text" class="card-text">Can you escape from the Cube</p>
+				<a href="Games/the_cube/index.html" id=the_cube class="btn btn-info">Play</a>
 			</div>
 		</div>
 	</div>
