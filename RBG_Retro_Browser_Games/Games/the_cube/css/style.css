@@ -10,7 +10,7 @@ body
 div 
 {
     width: 1200px;
-    margin: 5em auto;
+    margin: 3em auto;
     padding: 50px;
     background-color: #fff;
     border-radius: 1em;
@@ -40,6 +40,7 @@ text-decoration: none;
 
 h1 
 {
+    margin: 10px;
     text-align: center;
 }
 

@@ -1,22 +1,18 @@
 <?php
-  // Start the session
-  session_start();  
-
-  // This saves the value of the js cookie 'game_score' into the php variable '$score'
-  $Min = $_COOKIE['minutes'];
-  // This saves the value of the js cookie 'game_score' into the php variable '$score'
-  $Sec = $_COOKIE['seconds'];
-  // This saves the value of the js cookie 'game_score' into the php variable '$score'
-  $Col = ':'; 
-  
-
-  $score = $Min . $Col . $Sec;
-  echo $score;
-
-  // SetStores the value of the variable '$score' in session'
-  $_SESSION['game_score'] = $score;
-  // This saves the noughts and crosses game id (2) in the session variable 'game_id'
-  $_SESSION['game_id'] = 2;
+    // Start the session
+    session_start();
+    // This declares the variable '$Min' and assigns the value of the session variable 'minutes' to it.
+    $Min = $_SESSION['minutes'];
+    // This declares the variable '$Sec' and assigns the value of the session variable 'seconds' to it.
+    $Sec = $_SESSION['seconds'];
+    // This declares the variable '$Col' and assigns the string value of ':' to it.
+    $Col = ':'; 
+    // This declares the variable '$score' and assigns the concatenate values of the variables '$Min', '$Col' and '$Sec'.
+    $score = $Min . $Col . $Sec;
+    // Stores the value of the variable '$score' in session'
+    $_SESSION['game_score'] = $score;
+    // This saves the noughts and crosses game id (3) in the session variable 'game_id'
+    $_SESSION['game_id'] = 3;
 ?>
 
 <!-- Basic parameters for HTML -->
@@ -91,10 +87,10 @@
         <!--------------------  Navigation Bar  -------------------->
         <div class="wrapper">   
         <h1 style="color: white;">You Won In <?php echo $Min;?> Minutes And <?php echo $Sec;?> Seconds!</h1>
-        <!--------------------  Enter user name, POSTS value to 'noughts_and_crosses_score_process.php'  -------------------->
+        <!--------------------  Enter user name, POSTS value to 'the_cube_score_process.php'  -------------------->
                     <div class="username_entry_form-box">		
                     <h2 style="color: white;">Enter Your Username To Save Your Time</h2>
-                          <form action="noughts_and_crosses_score_process.php" method="post">
+                          <form action="the_cube_score_process.php" method="post">
                             <input placeholder="Username" type="text" name="uName">                       
                             <button type="submit" name="submit">OK</button>
                           </form><br>
