@@ -1,5 +1,5 @@
 <?php
-    // Start the session
+    // This starts the session
     session_start();
     // This declares the variable '$Min' and assigns the value of the session variable 'minutes' to it.
     $Min = $_SESSION['minutes'];
@@ -7,21 +7,20 @@
     $Sec = $_SESSION['seconds'];
     // This declares the variable '$Col' and assigns the string value of ':' to it.
     $Col = ':'; 
-    // This declares the variable '$score' and assigns the concatenate values of the variables '$Min', '$Col' and '$Sec'.
+    // This declares the variable '$score' and assigns the concatenated values of the variables '$Min', '$Col' and '$Sec'.
     $score = $Min . $Col . $Sec;
-    // Stores the value of the variable '$score' in session'
+    // This stores the value of the variable '$score' in the session variable 'game_score'.
     $_SESSION['game_score'] = $score;
-    // This saves the noughts and crosses game id (3) in the session variable 'game_id'
+    // This saves the noughts and crosses game id (3) in the session variable 'game_id'.
     $_SESSION['game_id'] = 3;
 ?>
-
 <!-- Basic parameters for HTML -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Score</title>
-        <!--------------------  Reference to custom CSS framework  -------------------->
+        <!--------------------  CSS framework  -------------------->
         <style>
             body {	
                 font-family: Arial, Helvetica, sans-serif;

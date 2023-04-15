@@ -7,20 +7,28 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--------------------  Reference to custom CSS framework  -------------------->
-        <link href="css/style.css" rel="stylesheet">       
+        <link href="css/style.css" rel="stylesheet">    
+        <script>
+            // This delares the 'var' type variable 'Sec' and assigns  the value of the php variable 'varSec' to it.
+            var Sec = 0;
+            // This delares the 'var' type variable 'Min' and assigns  the value of the php variable 'varMin' to it.
+            var Min = 0;
+        </script>   
     </head>
     <body>
         <div>
+            <!--------------------  Header  -------------------->
             <h1>The Cube</h1>
+            <!--------------------  Game Image  -------------------->
             <img src="images/cube.png" alt="View of the Cube">
-            
+            <!--------------------  Game Text  -------------------->
             <p>
                 Welocme to <b><u>The Cube</u></b> the most advanced human trap ever created. <br>Trapped inside a hypercube composed of 24 smaller cuboid rooms that <b><u>physically move and switch positions</u></b> <br>within the hypercube at set intervals, you must 
                 escape this mathmatical nightmare. Logic is your ally, move fast and <br>plan accordingly, otherwise you may find yourself back in the room you started in.
             </p>            
-
+            <!--------------------  Button Div  -------------------->
             <div class="play_button_div ">
-                <a href="white_1.php"><button class="green_play_button">Play Game</button></a>
+                <a href="white_1.php" onclick="document.cookie = 'minutes='+Min; document.cookie = 'seconds='+Sec;"><button class="green_play_button">Play Game</button></a>
             </div>            
         </div>
     </body>

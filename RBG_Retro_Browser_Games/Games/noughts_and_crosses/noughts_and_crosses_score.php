@@ -1,22 +1,18 @@
 <?php
-  // Start the session
-  session_start();  
-
-  // This saves the value of the js cookie 'game_score' into the php variable '$score'
-  $Min = $_COOKIE['minutes'];
-  // This saves the value of the js cookie 'game_score' into the php variable '$score'
-  $Sec = $_COOKIE['seconds'];
-  // This saves the value of the js cookie 'game_score' into the php variable '$score'
-  $Col = ':'; 
-  
-
-  $score = $Min . $Col . $Sec;
-  echo $score;
-
-  // SetStores the value of the variable '$score' in session'
-  $_SESSION['game_score'] = $score;
-  // This saves the noughts and crosses game id (2) in the session variable 'game_id'
-  $_SESSION['game_id'] = 2;
+    // This starts the php session.
+    session_start();
+    // This saves the value of the js cookie 'minutes' into the php variable '$Min'
+    $Min = $_COOKIE['minutes'];
+    // This saves the value of the js cookie 'seconds' into the php variable '$Sec'
+    $Sec = $_COOKIE['seconds'];
+    // This saves the string value ':' into the php variable '$Col'.
+    $Col = ':'; 
+    // This declares the php variable '$score' and assigns it the concatenated values of the variables '$Min', '$Col' and '$Sec'.
+    $score = $Min . $Col . $Sec;
+    // This stores the value of the variable '$score' in session'
+    $_SESSION['game_score'] = $score;
+    // This saves the noughts and crosses game id (2) in the session variable 'game_id'
+    $_SESSION['game_id'] = 2;
 ?>
 
 <!-- Basic parameters for HTML -->
@@ -88,8 +84,8 @@
         <script src="js/bootstrap_bundle_min.js"></script>
     </head>
     <body>
-        <!--------------------  Navigation Bar  -------------------->
         <div class="wrapper">   
+            <!--------------------  HTML Header  -------------------->
         <h1 style="color: white;">You Won In <?php echo $Min;?> Minutes And <?php echo $Sec;?> Seconds!</h1>
         <!--------------------  Enter user name, POSTS value to 'noughts_and_crosses_score_process.php'  -------------------->
                     <div class="username_entry_form-box">		

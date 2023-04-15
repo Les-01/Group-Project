@@ -1,9 +1,9 @@
 <?php
-  // Start the session
+  // This starts the session
   session_start();
-  // This saves the value of the js cookie 'minutes' into the php variable '$score'
+  // This saves the value of the js cookie 'minutes' into the php variable '$varMin'
   $varMin = $_COOKIE['minutes'];
-  // This saves the value of the js cookie 'seconds' into the php variable '$score'
+  // This saves the value of the js cookie 'seconds' into the php variable '$varSec'
   $varSec = $_COOKIE['seconds'];
   ?>
 
@@ -18,8 +18,10 @@
         <!--------------------  Reference to custom CSS framework  -------------------->
         <link href="css/style.css" rel="stylesheet">  
         <script>
+            // This is the 'generateRandomLink' method that randomly selects an element from the array 'links'.
             function generateRandomLink() 
             {
+                // This declares the variable 'links' which has string values (page addresses) stored in it as elements.
                 var links = 
                 [
                     "black_1.php",
@@ -43,19 +45,25 @@
                     "white_1.php",
                     "white_2.php",
                     "white_3.php",
-                    "yellow_1.php",
-                    "yellow_2.php",
-                    "yellow_3.php",
                 ];
+
+                // This uses the 'Math.floor', 'Math.random' and multipication combination to generate a random whole number. This is done because 'Math.random' will only generate a random number between 0 and 1, 
+                // whereas Math.random used with Math.floor generates whole numbers. Here a random number will be generated between 0 and the number of element stored in the variable 'randomIndex'. 
                 var randomIndex = Math.floor(Math.random() * links.length);
+                // Here the 'links' array is passed the variable 'randomIndex' selecting the element at the randomly generated index and returning it. 
                 return links[randomIndex];
             }
 
+            // This is the 'setRandomLink' function which has been passed 'buttonId'. 
             function setRandomLink(buttonId) {
-			var button = document.getElementById(buttonId);
-			button.href = generateRandomLink();
+                // Here the 'getElementById' method is passed 'buttonId' and used to find the HTML element with an 'id' that matches 'buttonId'. The HTML element is then stored in the variable 'button'.
+                var button = document.getElementById(buttonId);
+                // Here the 'generateRandomLink' function is called to generate a random link from the 'links' array which is then assigned to the 'href' property of the HTML element assigned to the variable 'button'.
+                button.href = generateRandomLink();
             }
 
+            // The 'window.onload' is an event handler that is called once the 'window object' has finished loading. Here once the 'window object' has finished loading the 'setRandomLink' function is called six times. 
+            // Each time the function is applied to a different buttonId setting the 'href' attribute of each button to a different random link.
             window.onload = function() {
                 setRandomLink("button1");
                 setRandomLink("button2");
@@ -65,33 +73,34 @@
                 setRandomLink("button6");
             };
 
-            // Add a new entry to the user's browsing history
+            // This addd a new entry to the user's browsing history.
             history.pushState(null, null, location.href);
-
-            // Listen for when the user navigates within your website
+            // This listens for when the user navigates within the website.
             window.addEventListener('popstate', function(event) 
             {
-                // If the user tries to navigate back, push them forward to the current page
+                // If the user tries to navigate back to a previous page, this pushes the user forward to the current page keeping them where they are.
                 history.pushState(null, null, location.href);
-            });        
+            }); 
+
         </script> 
     </head>
     <body>
         <div>
+            <!--------------------  Header  -------------------->
             <h1>The Cube  
-                <!--  Game Timer  -->
-                <!--  This paragraph will display the minutes  -->
+                <!--------------------  Game Timer  -------------------->
+                <!--------------------  This paragraph will display the minutes  -------------------->
                 <p style="display: inline-block;" id="minutes">0</p> 
-                <!--  This paragraph will display the seperating colon  -->
+                <!--------------------  This paragraph will display the seperating colon  -------------------->
                 <p style="display: inline-block;" id="col">:</p>
-                <!--  This paragraph will display the seconds  -->
+                <!--------------------  This paragraph will display the seconds  -------------------->
                 <p style="display: inline-block;" id="seconds">0</p>    
             </h1>
-            
+            <!--------------------  Game Image  -------------------->
             <img src="images/yellow_3.png" alt="Left And Right Junction In The Cube">
-
+            <!--------------------  Game Text  -------------------->
             <p>There is a junction ahead with both left and right turns, do you follow the Cube and turn left or right? Or go back and try to find another route?.</p>
-
+            <!--------------------  Button Div  -------------------->
             <div class="play_button_div ">
                 <a id="button1" href="#" onclick="document.cookie = 'minutes='+Min; document.cookie = 'seconds='+Sec;"><button class="yellow_play_button">Left</button></a>
                 <a id="button2" href="#" onclick="document.cookie = 'minutes='+Min; document.cookie = 'seconds='+Sec;"><button class="yellow_play_button">Right</button></a>
@@ -103,11 +112,11 @@
             </div>            
         </div>
         <script>
-            // This delares the 'var' type variable 'Sec' and assigns  the value of the php variable 'varSec' to it.
+            // This declares the 'var' type variable 'Sec' and assigns the value of the php variable 'varSec' to it.
             var Sec = "<?php echo $varSec; ?>";
-            // This delares the 'var' type variable 'Min' and assigns  the value of the php variable 'varMin' to it.
+            // This delares the 'var' type variable 'Min' and assigns the value of the php variable 'varMin' to it.
             var Min = "<?php echo $varMin; ?>";
-            // This declares the var type 'Countdown' variable using the method 'setInterval' which has been passed 'funtion'. This will call the variable 'Countdown' at set intervals
+            // This declares the var type 'Countdown' variable using the method 'setInterval' which has been passed 'function'. This will call the variable 'Countdown' at set intervals
             // executing the code block within the parenthesis.
             var Countdown = setInterval(function()
             {

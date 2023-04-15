@@ -10,7 +10,6 @@
     // This saves the value of the php variable '$varSec' in session.
     $_SESSION['seconds'] = $varSec;
   ?>
-
 <!-- Basic parameters for HTML -->
 <!doctype html>
 <html>
@@ -24,15 +23,17 @@
     </head>
     <body>
         <div>
+            <!--------------------  Header  -------------------->
             <h1>The Cube</h1>
+            <!--------------------  Game Image  -------------------->
             <img src="images/cube_finish.png" alt="Fireworks">
-
+            <!--------------------  Header  -------------------->
             <h1>Congratualtions! You Escaped The Cube in <?php echo $varMin; ?> minutes and <?php echo $varSec; ?> seconds!!</h1>
-            
+            <!--------------------  Game Text  -------------------->
             <p>
                 You escaped the cube.
             </p>            
-
+            <!--------------------  Button Div  -------------------->
             <div class="play_button_div ">
                 <a href="white_1.php"><button class="green_play_button">Play Again?</button></a>
                 <a href="the_cube_score.php"><button class="green_play_button">Save Your Time?</button></a>

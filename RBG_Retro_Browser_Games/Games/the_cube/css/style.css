@@ -1,3 +1,4 @@
+/*--------------------  Main Body CSS  --------------------*/
 body 
 {
     background-color: #12181B;
@@ -7,6 +8,7 @@ body
     serif;
 }
 
+/*--------------------  Div CSS  --------------------*/
 div 
 {
     width: 1200px;
@@ -16,12 +18,14 @@ div
     border-radius: 1em;
 }
 
+/*--------------------  Link CSS  --------------------*/
 a:link, a:visited 
 {
 color: #38488f;
 text-decoration: none;
 }
 
+/*--------------------  Responsive Window Elements CSS  --------------------*/
 @media (max-width: 700px) 
 {
     body
@@ -38,16 +42,19 @@ text-decoration: none;
     }
 }
 
+/*--------------------  Heading CSS  --------------------*/
 h1 
 {
     margin: 10px;
     text-align: center;
 }
 
+/*--------------------  Paragraph CSS  --------------------*/
 p {
     text-align: center;
   }
 
+  /*--------------------  Image CSS  --------------------*/
 img 
 {
     max-width: 100%;
@@ -56,6 +63,7 @@ img
     margin: auto;
 }
 
+/*--------------------  Play Button Div CSS  --------------------*/
 .play_button_div 
 {
     display: flex;
@@ -64,6 +72,7 @@ img
     width: 1000px;
 }
 
+/*--------------------  Black Button CSS  --------------------*/
 .black_play_button {
     background-color: #000000; /* Black */
     border: none;
@@ -77,6 +86,7 @@ img
     cursor: pointer;
 }
 
+/*--------------------  Blue Button CSS  --------------------*/
 .blue_play_button {
     background-color: #0145ff; /* Blue */
     border: none;
@@ -90,6 +100,7 @@ img
     cursor: pointer;
 }
 
+/*--------------------  Green Button CSS  --------------------*/
 .green_play_button {
     background-color: #00ff00; /* Green */
     border: none;
@@ -103,6 +114,7 @@ img
     cursor: pointer;
 }
 
+/*--------------------  Navy Blue Button CSS  --------------------*/
 .navy_blue_play_button {
     background-color: #0c00ba; /* Navy Blue */
     border: none;
@@ -116,6 +128,7 @@ img
     cursor: pointer;
 }
 
+/*--------------------  Orange Button CSS  --------------------*/
 .orange_play_button {
     background-color: #ff7300; /* Orange */
     border: none;
@@ -129,6 +142,7 @@ img
     cursor: pointer;
 }
 
+/*--------------------  Red Button CSS  --------------------*/
 .red_play_button {
     background-color: #ff0000; /* Red */
     border: none;
@@ -142,6 +156,7 @@ img
     cursor: pointer;
 }
 
+/*--------------------  White Button CSS  --------------------*/
 .white_play_button {
     background-color: #ffffff; /* White */
     border: none;
@@ -155,6 +170,7 @@ img
     cursor: pointer;
 }
 
+/*--------------------  Yellow Button CSS  --------------------*/
 .yellow_play_button {
     background-color: #e5ff00; /* Yellow */
     border: none;
@@ -168,6 +184,7 @@ img
     cursor: pointer;
 }
 
+/*--------------------  Quit Game Button CSS  --------------------*/
 .quit_button
 {
     background-color: #f10b0b; /* Red */
