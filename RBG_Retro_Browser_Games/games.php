@@ -5,7 +5,7 @@
 	include("config/conn.php");
 	include("config/functions.php");
 	// 'IF' statement to determine if user is logged in to assign navbar file based on user 'tier'.
-	if(($User_Data = check_login($con)) == true)
+	if(($User_Data = access_login($con)) == true)
 	{
 		// Here the 'navbar_check' function is called.
 		navbar_check($con);
@@ -37,70 +37,61 @@
 	<!-------------------- CSS Link ------------------>
 	<link rel="stylesheet" href="css/styles.css">
 	<!--------------------  CSS framework  -------------------->
-		<style>
-		body 
-		{	
-			background-image: url("Images/high_back.png"); 	
-		}
-
-		div.games_main 
-		{	
-			width: 1345px;
-			height: auto;
-			margin: 5em auto;
-			padding: 50px;
-			background-color: #E8E1C7;
-			border-radius: 1em;		
-		}	
-		</style>
+		
 	</head>
 	<body>
 		<!--------------------  Main Page Divs  -------------------->
-		<div class="games_main">		
-			<div class="wrapper">
+		
+		<div class="games_main" style="align-items: justify-content-center;">		
+			
 				<!--------------------  Bootstrap Column Seperator  -------------------->
-				<div class="responsive row gy-2"> 
+				<div class="responsive row p-5" style="align-items: center;"> 
 					<div class="row row-cols-2 row-cols-md-3 g-5">
 						<!--------------------  Bootstrap Card  -------------------->
-						<div class="col gy-2">
-							<div class="shadow-lg p-3 mb-5 bg-body rounded">
-							<img id="snake_thumb.jpg" class="card-img-top w-100 h-30" src="images/snake_thumb.jpg" alt="Placeholder">
+						
+						<div class="col p-1">
+							<div class="p-3 mt-3 ms-5 mb-5 border border-warning border-3 rounded-3 bg-body rounded" style="color: #a3c; height: 95%;">
+							<h3 class="card-title text-center"><br><b>SNAKE</b></h3><br>
+							<img id="snake_thumb.jpg" class="card-img-top w-100" src="images/snake_thumb.jpg" alt="Placeholder">
 								<div id="Snake" class="card-body text-center">
-									<h5 class="card-title"><b>SNAKE</b></h5>
-									<p id="Snake-text" class="card-text">Welcome to the classic game of Snake, your goal is to grow your snake by eating as many dots as possible without running into any obstacles or your own tail. Are you ready to slither your way to victory?
-										<br> Click play to have a go!<br><br></p>
-									<a href="Games/snake/main.html" id=Snake class="btn btn-info">Play</a>
+									
+									<p id="Snake-text" class="card-text"><br>Welcome to the classic game of Snake, your goal is to grow your snake by eating as many dots as possible without running into any obstacles or your own tail. Are you ready to slither your way to victory?
+										<br><br> Click play to have a go!</p><br>
+									<a href="Games/snake/main.html" id=Snake class="btn btn-warning w-100" style="visibility: <?php access_check($con) ?>;">Play</a>
 								</div>
 							</div>
 						</div>
+
 						<!--------------------  Bootstrap Table  -------------------->
-						<div class="col gy-2">
-							<div class="shadow-lg p-3 mb-5 bg-body rounded">
-							<img id="noughts_thumb.jpg" class="card-img-top w-100 h-30" src="images/noughts_n_crosses.jpg" alt="Placeholder">
-								<div id="GameX" class="card-body text-center">
-									<h5 class="card-title"><b>Noughts & Crosses</b></h5>
-									<p id="GameX-text" class="card-text">Welcome to the multiplayer version of Noughts and Crosses, also known as Tic-Tac-Toe. This is a game of strategy and skill, where two players take turns placing their X's and O's on 
-										a 3x3 grid, trying to get three in a row horizontally, vertically, or diagonally. Can you outsmart your opponent and claim victory?<br><br></p>
-									<a href="Games/noughts_and_crosses/index.html" id=noughts_and_crosses class="btn btn-info">Play</a>
+						<div class="col p-3">
+							<div class="p-3 mt-3 ms-5 mb-5 border border-warning border-4 rounded-3 bg-body rounded" style="color: #a3c; height: 95%;"> <!-- 'ms' is margin side, 'p' is padding 'mt' is margin top, 'mb' is margin bottom, 'bg' is background, 'col' is column, 'w' is width, 'h' is height. -->
+							<h3 class="card-title text-center"><b><br>Noughts & Crosses</b></h3><br>
+							<img id="noughts_thumb.jpg" class="card-img-top w-100" src="images/noughts_n_crosses.jpg" alt="Placeholder">
+								<div id="Noughts_N_Crosses" class="card-body text-center">
+									
+									<p id="Noughts_N_Crosses-text" class="card-text"><br>Welcome to the multiplayer version of Noughts and Crosses, also known as Tic-Tac-Toe. This is a game of strategy and skill, where two players take turns placing their X's and O's on 
+										a 3x3 grid, trying to get three in a row horizontally, vertically, or diagonally. Can you outsmart your opponent and claim victory?<br><br></p><br><br>
+									<a href="Games/noughts_and_crosses/index.html" id=noughts_and_crosses class="btn btn-outline-white btn-warning w-100" style="visibility: <?php access_check($con) ?>;">Play</a>
 								</div>
 							</div>
 						</div>
 						<!--------------------  Bootstrap Card  -------------------->
-						<div class="col gy-2">
-							<div class="shadow-lg p-3 mb-5 bg-body rounded">
-							<img id="GameX-img" class="card-img-top w-100 h-30" src="Games/the_cube/images/cube_2.png" alt="Placeholder">
-								<div id="GameX" class="card-body text-center">
-									<h5 class="card-title"><b>The Cube</b></h5>
-									<p id="GameX-text" class="card-text">Trapped in a maze of ever changing interconnected cube-shaped rooms, your only chance of survival is to successfully navigate your way through the maze to find a way out. 
-										One wrong turn lead you straight back to the start. Can you escape the cube?</p>
-									<a href="Games/the_cube/index.html" id=the_cube class="btn btn-info">Play</a>
+						<div class="col p-3">
+							<div class="p-3 mt-3 ms-5 mb-5 border border-warning border-3 rounded-3 bg-body rounded" style="color: #a3c; height: 95%;">
+							<h3 class="card-title text-center"><b><br>The Cube</b></h3><br>
+							<img id="The_Cube-img" class="card-img-top w-100" src="images/cube2.jpg" alt="Image of a cube maze">
+								<div id="The_Cube" class="card-body text-center">
+									
+									<p id="The_Cube-text" class="card-text"><br>Trapped in a maze of ever changing interconnected cube-shaped rooms, your only chance of survival is to successfully navigate your way through the maze to find a way out. 
+										One wrong turn lead you straight back to the start. Can you escape the cube?</p><br>
+									<a href="Games/the_cube/index.html" id=the_cube class="btn btn-outline-white btn-warning w-100" style="visibility: <?php access_check($con) ?>;">Play</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		
 	</body>
 	<!--------------------  JavaScript CDNs  -------------------->
 	<script src="js/jquery-3.6.0.js"></script>

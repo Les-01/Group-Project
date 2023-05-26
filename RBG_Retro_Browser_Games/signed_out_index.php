@@ -1,32 +1,18 @@
 <?php
-
-session_start();
-if ($_SESSION['BL_Message_displayed'] == 'yes') {
-    header("Location: Process_Files/logout_process.php");
-}
+     //This closes the script
 
 
 // ********************* INCLUDE FILES ********************* 
-include("config/conn.php");
 include("config/functions.php");
+include("Navbars/general_navbar.php");
 // ********************* INCLUDE FILES *********************
 
-if(($User_Data = check_login($con)) == true) // Finally, I figured this out as I decided to use a boolean value.
-{
-BL_Check($con);
-
-navbar_check($con);
-$_SESSION['Username'] = $User_Data['Username'];
-$_SESSION['Email'] = $User_Data['Email'];
-$_SESSION['Tier'] = $User_Data['Tier'];
-
-}
-else
-{
-  include("Navbars/general_navbar.php");
-}
-
 bg_check($con);
+
+    echo '<script type="text/javascript">'; //This is injected code to run an alert
+    echo 'alert("Sign-Out Successful! Please come back again soon.")'; // This is the alert that will be shown once the user has successfully registered.
+    echo '</script>';
+
 
 ?>
 

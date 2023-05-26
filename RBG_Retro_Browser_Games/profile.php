@@ -1,5 +1,6 @@
 <?php
 
+
 session_start();
 
 // ********************* INCLUDE FILES ********************* 
@@ -9,16 +10,18 @@ include("config/functions.php");
 
 if(($User_Data = check_login($con)) == true)
 {
+//BL_Check();
+
 navbar_check($con);
 $_SESSION['Username'] = $User_Data['Username'];
 $varUserID = $User_Data['User_ID'];
 }
 else
 {
-  include("Navbars/general_navbar.php");
+  header('Location: ../index.php'); // This line will redirect the user back to the landing page if the user isn't signed in with an account.
 }
 
-bg_check($con);
+bg_check2($con);
 
 ?>
 
@@ -31,6 +34,7 @@ bg_check($con);
 <head>
   
 <!-- https://www.w3schools.com/howto/howto_css_chat.asp -->
+
 
 </head>
 
@@ -49,7 +53,7 @@ bg_check($con);
     
   <div class="container">
     <div class="box g-5 text-center fs-4">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="color: #a3c;>  
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="color: #a3c";>  
         
         <br>
         <li>
@@ -66,6 +70,9 @@ bg_check($con);
         </li><br>
         <li>
           <a><b>Password: ********** </b></a><button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#password_change">Edit</button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#remove">Delete Account</button>
         </li>
         <br>
 

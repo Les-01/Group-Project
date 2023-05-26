@@ -6,7 +6,7 @@
 
 <!-- ********************* LOGIN MODAL START ********************* -->
 
-    <form action="Process_Files/login_process.php" method="POST">   
+    <form action="../Process_Files/login_process.php" method="POST">   
       <div class="modal fade" id="login" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -22,9 +22,6 @@
                   <br>
                   <input type="password" class="form-control" id="test-email" name="Password" placeholder="Password">
                   <br>  
-                  <label>
-                      <input type="checkbox" value="remember-me" name="remember_me"> Remember me
-                  </label>
     
                   <div class="modal-footer item-align center">
                     <button class="w-100 btn btn-lg btn-primary bg-success border border-success-subtle">Login</button>
@@ -42,71 +39,65 @@
 
 <!-- ********************* LOGIN MODAL END ********************* -->
 
-<!-- ********************* UPDATE MODAL START (redundant) ********************* -->
+<!-- ********************* ACCESS LOGIN MODAL START ********************* -->
 
-    <form action="Process_Files/update_process.php" method="POST">   
-      <div class="modal fade" id="update" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <form action="Process_Files/login_process.php" method="POST">   
+      <div class="modal fade" id="access_login" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modal-title">Make Changes to an account</h5>
+              <h5 class="modal-title text-center" id="modal-title">You are not signed in, please sign in here</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- btn-close makes a cross and bootstrap knows where to put it within the div. data-bs-dismiss will dismiss the modal -->
             </div>
       
-                <div class="modal-body">
-                  <p>Double check all details</p>
-                  <p>Only <b>ONE</b> change at a time!</p>
-                  
-                  <input type="text" class="form-control" id="Username" name="Username" placeholder="Current Username">
+                <div class="modal-body text-center">
+                  <p>Please fill both fields</p>
+
+                  <input type="text" class="form-control" id="Username" name="Username" placeholder="Username">
                   <br>
-                  <input type="text" class="form-control" id="NewUsername" name="NewUsername" placeholder="New Username">
-                  <br>
-                  <input type="text" class="form-control" id="NewFname" name="NewFname" placeholder="New First Name">
-                  <br>    
-                  <input type="text" class="form-control" id="NewSname" name="NewSname" placeholder="New Second Name">
-                  <br>
-                  <input type="email" class="form-control" id="NewEmail" name="NewEmail" placeholder="New Email">
-                  <br>
-                  <input type="text" class="form-control" id="NewRank" name="NewRank" placeholder="New Rank">
-                  <br>
-                  <input type="password" class="form-control" id="NewPassword" name="NewPassword" placeholder="New Password">
-                  <br>
+                  <input type="password" class="form-control" id="Password" name="Password" placeholder="Password">
+                  <br>  
+    
                   <div class="modal-footer item-align center">
-                    <button class="w-100 btn btn-lg btn-primary bg-success border border-success-subtle">Process</button>
-                  </div>  
-                </div>
+                    <button class="w-100 btn btn-lg btn-primary bg-success border border-success-subtle">Login</button>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-primary bg-success border border-success-subtle text-center" data-bs-toggle="modal" data-bs-target="#forgotten_password">Forgotten Password</a>
+                  </div>
+            </div> 
           </div>
         </div>
       </div>
     </form>
   
 
-<!-- ********************* UPDATE MODAL END (redundant) ********************* -->
+<!-- ********************* ACCESS LOGIN MODAL END ********************* -->
+
 
 <!-- ********************* REMOVE MODAL START ********************* -->
 
-    <form action="Process_Files/login_process.php" method="POST">   
+    <form action="Process_Files/removal_process.php" method="POST">   
       <div class="modal fade" id="remove" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modal-title">Sign In Here</h5>
+              <h5 class="modal-title text-center" id="modal-title">Are you sure you wish to remove your account?</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- btn-close makes a cross and bootstrap knows where to put it within the div. data-bs-dismiss will dismiss the modal -->
             </div>
       
-                <div class="modal-body">
-                  <p>Please fill both fields</p>
+                <div class="modal-body text-center">
+                  <p>Please fill <b>ALL</b> fields! <br> Case sensitive</p>
 
-                  <input type="text" class="form-control" id="test-email" name="Username" placeholder="Username">
+                  <input type="text" class="form-control" id="Username" name="username" placeholder="Username">
                   <br>
-                  <input type="password" class="form-control" id="test-email" name="Password" placeholder="Password">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                   <br>  
-                  <label>
-                      <input type="checkbox" value="remember-me" name="remember_me"> Remember me
-                  </label>
+                  <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Retype Password">
+                  <br>
+                 
     
                   <div class="modal-footer item-align center">
-                    <button class="w-100 btn btn-lg btn-primary bg-success border border-success-subtle">Login</button>
+                    <button class="w-100 btn btn-lg btn-primary bg-danger border border-success-subtle">Confirm</button>
                   </div>
                 </div>
           </div>
@@ -154,42 +145,6 @@
   
 
 <!-- ********************* FORGOTTEN PASSWORD MODAL END ********************* -->
-
-<!-- ********************* Not working.... PROFILE MODAL START ********************* -->
-
-    <form action="Process_Files/login_process.php" method="POST">   
-      <div class="modal fade" id="profile" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-center" id="modal-title">Sign In Here</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- btn-close makes a cross and bootstrap knows where to put it within the div. data-bs-dismiss will dismiss the modal -->
-            </div>
-      
-                <div class="modal-body text-center">
-              
-          <br>
-    <a><b>Username: </b><?php echo $User_Data['Username']; ?></a> <a class="button btn" data-bs-toggle="modal" data-bs-target="#Username_Edit">Edit</a> 
-    <br>
-    <a><b>Email: </b><?php echo $User_Data['Email']; ?></a> <a class="button btn" data-bs-toggle="modal" data-bs-target="#Email_Edit">Edit</a>
-    <br>
-    <a><b>First Name: </b><?php echo $User_Data['Fname']; ?></a> <a class="button btn" data-bs-toggle="modal" data-bs-target="#Fname_Edit">Edit</a>
-    <br>
-    <a><b>Second Name: </b><?php echo $User_Data['Sname']; ?></a> <a class="button btn" data-bs-toggle="modal" data-bs-target="#Sname_Edit">Edit</a>
-    <br>
-    <a><b>Gamer Score: </b><?php echo $User_Data['Gamer_Score']; ?></a> <a class="button btn" data-bs-toggle="modal" data-bs-target="#Username_Edit">Edit</a>
-    <br>
-    <a><b>Password: ********** </b></a> <a class="button btn" data-bs-toggle="modal" data-bs-target="#Password_Edit">Edit</a>
-
-
-                  </div> 
-          </div>
-        </div>
-      </div>
-    </form>
-  
-
-<!-- ********************* PROFILE MODAL END ********************* -->
 
 
 <!-- ********************* CHANGE USERNAME MODAL START ********************* -->
@@ -415,15 +370,15 @@
       <li>Q: How do I change my profile picture? </li>
       <li>A: Just simply click on your image when on the 'Profile' page. </li><br>  
       <li>Q: How did you come up with the idea for this site?</li>
-      <li>A: blah blah </li><br>
+      <li>A: We both like games and we thought it would be interesting to bring the past to the future, retro games being played on a browser. </li><br>
       <li>Q: What does this website have to offer?</li>
-      <li>A: blah blah </li><br>
+      <li>A: Games, a place to show off your retro gaming skills by competing to try and beat the high score! </li><br>
       <li>Q: How do I update my details? </li>
-      <li>A: blah blah </li><br>
-      <li>Q: What does the 'Gamer Score' get calculated? </li>
-      <li>A: blah blah </li><br>
+      <li>A: Simply go to your profile page and click the 'Edit' button beside the information you wish to amend. </li><br>
+      <li>Q: How does the 'Gamer Score' get calculated? </li>
+      <li>A: Short answer, it doesn't...yet, this is actually a feature that will be coming, very soon. </li><br>
       <li>Q: Will more games be added? </li>
-      <li>A: Short answer, YES! However, it DOES take time to write the code for these games and then intergrate it into the website.</li><br>
+      <li>A: YES! However, it DOES take time to write the code for these games and then intergrate it into the website.</li><br>
       
     </ul>
   </div>
@@ -456,12 +411,21 @@
       If we haven't then let us know via the <a href="contact_us.php">Contact Us</a> page.
       <br>
       Click the 'Games' tab on the navigation bar to browse the games already available, alternatively just click <a href="games.php">here</a>.<br>
-      Happy gaming! <br><br>  
+      Happy gaming! <br><br>
+      Latest update:<br>
+      <ul>
+      <li>- A scoreboard - (so we can have a leaderboard which will allow our users to see where they rank based on their skill points earned <br> by playing the games)</li><br>
+      <li>- Warning functions and blacklisting capabilities, this is for the who wish to use and abuse.</li><br>
+      <li>- The Cube game. Why not try your luck and see if you can escape The Cube!</li><br>
+      <li>- Error fixes and stability updates.</li><br>
+      <li>- Created limitations to game access, you now need to be a logged in user to gain access to play. <br> This is an attempt to stop non-users from breaking your record!</li><br>
+      </ul>
+      <br>
       Still to come:<br> 
       <ul>
-         <li> A scoreboard - (so we can have a leaderboard which will allow our users to see where they rank based on their skill points earned <br> by playing the games)</li>
-         <li> A Chat page - (a place that users can come together and share gaming tips and help each other to reach higher scores)</li>
-         <li> New games - (We are currently looking into a first person shooter style game)</li>
+         
+         <li>- A Chat page - (a place that users can come together and share gaming tips and help each other to reach higher scores)</li>
+         <li>- New games - (We are currently looking into a first person shooter style game)</li>
       </ul>
       <br> 
     </p>
@@ -472,12 +436,30 @@
 </div>
 <!-- ************************** ABOUT - COMING SOON ************************** -->
 
+<!-- ************************** CONTACT US - COMING SOON ************************** -->
+<div class="modal fade" id="CONTACT_US" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" style="align-text: center; text-center">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- btn-close makes a cross and bootstrap knows where to put it within the div. data-bs-dismiss will dismiss the modal -->
+            </div>
 
+<div class="bgimg">
+  <div class="middle  bg-info-subtle border border-primary-subtle rounded-3 text-center">
+  <div class="title text-center"><h1>CONTACT US</h1>
+  <hr>
+  <p>Please feel free to contact us in regard to any errors, crashes or feedback you may have.
+  <br> Please also feel free to give any suggestions that you think that we could implement to enhance your website experience.
+  <br> You can email us at: <h5>support@highersphere.co.uk</h5></p>
+</div>
 
+  </div>
+</div>
+</div>
+</div>
+</div>
 
-
-
-
+<!-- ************************** CONTACT US - COMING SOON ************************** -->
 
 
 

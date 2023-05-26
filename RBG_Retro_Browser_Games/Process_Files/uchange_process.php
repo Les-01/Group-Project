@@ -42,7 +42,7 @@ if (!empty($Username) && !empty($NewUsername) && !empty($Password)) // This line
                 $_SESSION['User_Pword'] = $User_Data['User_Pword']; // This line is saying is the User ID gathered in session matches the user id that comes back from the user data then to run the below code.*/
 
                 //Echo "Success, your Username has been updated!"; // This line will redirect the user to the index/home page if the above parameters are met.
-                header('location:../profile.php');
+                header('location: ../profile.php');
                 die; // This line will kill the code and makes sure nothing bleeds over into any other pages.
               }
           }

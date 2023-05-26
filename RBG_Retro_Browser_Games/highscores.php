@@ -36,28 +36,17 @@
         <!-------------------- CSS Link ------------------>
         <link rel="stylesheet" href="css/styles.css">
         <!--------------------  CSS framework  -------------------->
-        <style>
-            body 
-            {	
-                background-image: url("Images/high_back.png"); 	
-            }
-
-            div.high_main 
-            {	
-                width: 1345px;
-                height: auto;
-                margin: 5em auto;
-                padding: 50px;
-                background-color: #E8E1C7;
-                border-radius: 1em;		
-            } 
-        </style>
+        
     </head>
     <body>
-        <!--------------------  Bootstrap Table  -------------------->
+        <!--------------------  Bootstrap Table Snake -------------------->
+        <br>
+        <div class="d-flex p-2 bd-highlight justify-content-center">
+  <div class="card">
+<div class="container g-5 text-center border border-danger border-3 rounded" style="color: #a3c; max-width: 2000px;">
         <div class="high_main">		
             <div class="wrapper">     
-                <h1 style="text-align: center; color: black; font-weight: bold; text-decoration: underline;">Snake Highscores</h1>
+                <h1 style="text-align: center; color: #ffc107; font-weight: bold; text-decoration: underline;">Snake Highscores</h1>
                 <table class="table table-striped table-dark table-sm">
                     <!--------------------  HTML Table Column Headings  -------------------->
                     <thead>
@@ -90,8 +79,8 @@
                 </table>        
                 <br>    
                 <br>
-                <!--------------------  Bootstrap Table  -------------------->
-                <h1 style="text-align: center; color: black; font-weight: bold; text-decoration: underline;">Noughts & Crosses Highscores</h1>
+                <!--------------------  Bootstrap Table N&X -------------------->
+                <h1 style="text-align: center; color: #fd7e14; font-weight: bold; text-decoration: underline;">Noughts & Crosses Highscores</h1>
                 <table class="table table-striped table-dark table-sm">
                     <thead>
                         <tr>
@@ -101,7 +90,7 @@
                     </thead>
                     <tbody>
                             <?php
-                                $sql = "SELECT `score`, `user_name` FROM `highscore_tbl` WHERE `game_id` LIKE '2' ORDER BY `score` DESC LIMIT 10";
+                                $sql = "SELECT `score`, `user_name` FROM `highscore_tbl` WHERE `game_id` LIKE '2' ORDER BY `score` ASC LIMIT 10";
                                 // This passes the variables $conn and $sql to the the function 'mysqli_query' and assigns the result of the query to the variable '$result'.
                                 $result = mysqli_query($con, $sql);
                                 // This 'IF' statement declares that if the value of the variable '$result' and the number of rows is greater than zero execute the code within the statement. 
@@ -123,7 +112,7 @@
                 <br>    
                 <br> 
                 <!--------------------  Bootstrap Table  -------------------->
-                <h1 style="text-align: center; color: black; font-weight: bold; text-decoration: underline;">The Maze Highscores</h1>
+                <h1 style="text-align: center; color: #dc3545; font-weight: bold; text-decoration: underline;">The Cube Highscores</h1>
                 <table class="table table-striped table-dark table-sm">
                     <thead>
                         <tr>
@@ -133,7 +122,7 @@
                     </thead>
                     <tbody>
                             <?php                            
-                                $sql = "SELECT `score`, `user_name` FROM `highscore_tbl` WHERE `game_id` LIKE '3' ORDER BY `score` DESC LIMIT 10";
+                                $sql = "SELECT `score`, `user_name` FROM `highscore_tbl` WHERE `game_id` LIKE '3' ORDER BY `score` ASC LIMIT 10";
                                 // This passes the variables $conn and $sql to the the function 'mysqli_query' and assigns the result of the query to the variable '$result'.
                                 $result = mysqli_query($con, $sql);
                                 // This 'IF' statement declares that if the value of the variable '$result' and the number of rows is greater than zero execute the code within the statement. 
@@ -155,7 +144,11 @@
                 <br>    
                 <br>
             </div>
-        </div>        
+            </div>
+            </div>
+            </div>
+        </div>  
+        <br>      
     </body>
     <!-- ************************* JQuery CDN *************************** -->
     <script src="js/jquery-3.6.0.js"></script>
