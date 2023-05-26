@@ -26,7 +26,7 @@
             <!--------------------  Header  -------------------->
             <h1>The Cube</h1>
             <!--------------------  Game Image  -------------------->
-            <img src="images/cube_finish.png" alt="Fireworks">
+            <img src="images/cube_finish.jpg" alt="Fireworks">
             <!--------------------  Header  -------------------->
             <h1>Congratualtions! You Escaped The Cube in <?php echo $varMin; ?> minutes and <?php echo $varSec; ?> seconds!!</h1>
             <!--------------------  Game Text  -------------------->

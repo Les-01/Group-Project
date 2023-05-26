@@ -97,7 +97,7 @@
                 <p style="display: inline-block;" id="seconds">0</p>    
             </h1>
             <!--------------------  Game Image  -------------------->
-            <img src="images/white_2.png" alt="Left And Right Junction In The Cube">
+            <img src="images/white_2.jpg" alt="Left And Right Junction In The Cube">
             <!--------------------  Game Text  -------------------->
             <p>There is a junction ahead with both left and right turns, do you follow the Cube and turn left or right? Or go back and try to find another route?.</p>
             <!--------------------  Button Div  -------------------->

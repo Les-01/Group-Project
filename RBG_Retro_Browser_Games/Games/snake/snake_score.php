@@ -23,7 +23,7 @@
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 14px;
                 color: rgb(0, 0, 0);
-                background-image: url("../..//Images/high_back.png"); 	
+                background-image: url("../../Images/high_back.png"); 	
                 width: 100%;
 	            height: 100%;
                 background-size: cover;

@@ -5,8 +5,9 @@ session_start();
     // 'require_once' is used instead of 'include' as the require function is designed for when the file is required by your application
     // such as an important file containing configuration variables, without which the application would break. Whereas include is used to 
     // include files that the application flow would continue when not found, such as templates.
-    require_once '../..//Config/conn.php';
-    require_once '../..//Config/functions.php';      
+    require_once '../..//config/conn.php';
+    require_once '../..//config/functions.php';      
+      
 
     // This 'IF' statement declares that if the submit button has been used to access this proccess page execute the code within the 'IF' statement.
     if(isset($_POST['submit']))
