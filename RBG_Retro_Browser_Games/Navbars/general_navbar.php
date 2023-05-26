@@ -36,20 +36,17 @@ include("modals.php");
             <a class="nav-link" href="highscores.php"><B>Highscores</B></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#login"><b>Sign In</b></a>
+            <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#login"><b>Sign In</b></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><b>More</b></a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="about.php"><b>About</b></a></li>
-              <li><a class="dropdown-item" href="faq.php"><b>FAQ</b></a></li>
-              <li><a class="dropdown-item" href="contact_us.php"><b>Contact Us</b></a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ABOUT"><b>About</b></a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#FAQ"><b>FAQ</b></a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#CONTACT_US"><b>Contact Us</b></a></li>
             </ul>
           </li>
         </ul>
-        <form role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
       </div>
     </div>
   </nav>

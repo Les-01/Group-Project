@@ -39,7 +39,7 @@ include("modals.php");
             <a class="nav-link" href="highscores.php"><B>Highscores</B></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Process_Files/logout.php"><B>Logout</B></a>
+            <a class="nav-link" href="Process_Files/logout_process.php"><B>Logout</B></a>
           </li>
 
           <!-- ************* DROPDOWN BUTTON START *********** -->
@@ -64,10 +64,7 @@ include("modals.php");
           </li> 
           <!-- ************* ADMIN DROPDOWN BUTTON END *********** -->
         
-        </ul> 
-        <form role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>  
+        </ul>  
       </div>
     </div>
   </nav>
