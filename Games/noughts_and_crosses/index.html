@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <title>Noughts and Crosses</title>
+    <!--  This is the link to the external css file.  -->
+    <link rel="stylesheet" href="style.css"/>
+    <!--  This is the link to the external js file.  -->
+    <script src="./index.js"></script>  
+</head>
+<body>
+    <!--  This creates a background style div to contain all elements of the game.  -->
+    <main class="background">
+        <!--  This creates the title section to contain the title of the game.  -->
+        <section class="title">
+            <!--  This creates the h1 header.  -->
+            <h1>Noughts and Crosses</h1>
+            <!--  Game Timer  -->
+            <!--  This paragraph will display the minutes  -->
+            <p style="display: inline-block;" id="minutes">0</p> 
+            <!--  This paragraph will display the seperating colon  -->
+            <p style="display: inline-block;" id="col">:</p>
+            <!--  This paragraph will display the seconds  -->
+            <p style="display: inline-block;" id="seconds">0</p>    
+        </section>
+        <!--  This creates the 'display' section to show which players turn it is next.  -->
+        <section class="display">
+            <!--  Here the 'span' tag is used to enable inline modification of elements within the span. Here the 'display-player' class will enable the 
+            switching of players being displayed depending on which players turn it is and the 'playerX' class will enable the colour to be changed.  -->
+            Player <span class="display-player playerX">X</span>'s turn'
+        </section>
+        <!--  This creates the 'container' section which itself contains 9 'tile' class divs. This will create a 3x3 game grid.  -->
+        <section class="container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </section>
+        <!--  This creates the 'display announder hide' section. This will not be visible until the end of the game.  -->
+        <section class="display announcer hide"></section>
+        <!--  This creates the 'controls' section.  -->
+        <section class="controls">
+            <!--  This creates a reset button and assigns it the id 'reset'.  -->
+            <button id="reset">Reset</button>
+        </section>
+    </main>  
+    <script>
+        // This delares the 'var' type variables 'Sec' and 'Min' which will hold the values of the timer.
+        var Sec = 0;
+        var Min = 0;
+        // This declares the var type 'Countdown' variable using the method 'setInterval' which has been passed 'funtion'. This will call the variable 'Countdown' at set intervals, executing the code block within the parenthesis.
+        var Countdown = setInterval(function()
+        {
+            // This will add 1 to the value stored in the variable 'Sec'.
+            ++Sec;
+            // Here 'document.getElementById' is used to get the element with the id 'seconds' and display the contents of the variable 'Sec' in it.
+            document.getElementById("seconds").innerHTML = Sec;
+            // This 'if' statement states that if the value stored in the variable 'Sec' is less than or equal to 60, execute the code within the parenthesis.  
+            if(Sec >=60)
+            {
+                // This sets the value of the variable 'Sec' to 0.
+                Sec = 0;
+                // This will add 1 to the value stored in the variable 'Min'.
+                ++Min;
+                // Here 'document.getElementById' is used to get the element with the id 'minutes' and display the contents of the variable 'Min' in it.
+                document.getElementById("minutes").innerHTML = Min;
+            }
+            // This sets the interval timer for the execution of 'funtion' stored in the variable 'Countdown'.
+        }, 600);    
+    </script>
+</body>
+</html>
