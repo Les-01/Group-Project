@@ -50,7 +50,7 @@ include("../modals.php"); //This is an inclusion that includes the modals file.
     </div><!-- This is closing the div -->
     <br><!-- This is a page break -->
     <div class="form-floating"><!-- This is the start of a new div and the class is the parameter -->
-      <input type="text" class="form-control" id="floatingInput" required minlength="5" name="Sname" placeholder="Surname"><!-- This is an input box that the user would need to populate. The parameters are then set. 'placeholder' is what will be shown in the input box. Required means that information has to be put into the box and the minlength means that there is a minimum length of characters that need to be input. -->
+      <input type="text" class="form-control" id="floatingInput" required minlength="3" name="Sname" placeholder="Surname"><!-- This is an input box that the user would need to populate. The parameters are then set. 'placeholder' is what will be shown in the input box. Required means that information has to be put into the box and the minlength means that there is a minimum length of characters that need to be input. -->
       <label for="floatingInput">Surname</label><!-- This is a label that will show above the input box, then the title comes next -->
     </div><!-- This is closing the div -->
     <br><!-- This is a page break -->
