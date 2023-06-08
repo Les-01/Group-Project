@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        /*--------------------  Main body CSS. --------------------*/
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-image: url("../../Images/high_back.png");
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+
+        /*--------------------  Game Board CSS. --------------------*/
+        /*--------------------  Sets the width to 100vmin. 'VMIN' stands for "view point minimum" which sets the size of the game board as a percentage of the minimum value of either the height or width.  
+        In this case 100% of the value of either the height or width depending on which is smaller. This makes the game boards height and width relative to the size of the window it's being displayed on.  
+        The game board display is then set to 'grid' and defines both the parameters of both the rows and columns.  --------------------*/
+        #game-board {
+            background-color: #035096;
+            width: 100vmin;
+            height: 100vmin;
+            display: grid;
+            grid-template-rows: repeat(21, 1fr);
+            grid-template-columns: repeat(21, 1fr);
+        }
+
+        /*--------------------  Snake Body CSS. --------------------*/
+        .snake {
+            background-color: #bf40bf;
+            border: .25vmin solid black;            
+        }
+
+        /*--------------------  Food Item CSS. --------------------*/
+        .food {
+            background-color: #fdcc18; 
+            border: .25vmin solid black;            
+        }
+    </style>
+    <!--------------------  This imports the javascript file "game.js". 'defer type="module"' defers 'game.js' from being loaded untill after the html body.  -------------------->
+    <script src="game.js" defer type="module"></script>
+</head>
+<body>
+    <!--------------------  This creates a div with the id 'game-board' which will be the area the game is played in.  -------------------->
+    <div id="game-board"></div>    
+</body>
+</html>
