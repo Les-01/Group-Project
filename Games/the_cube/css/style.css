@@ -1,0 +1,200 @@
+/*--------------------  Main Body CSS  --------------------*/
+body 
+{
+    background-color: #12181B;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-
+    serif;
+}
+
+/*--------------------  Div CSS  --------------------*/
+div 
+{
+    width: 1200px;
+    margin: 3em auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 1em;
+}
+
+/*--------------------  Link CSS  --------------------*/
+a:link, a:visited 
+{
+color: #38488f;
+text-decoration: none;
+}
+
+/*--------------------  Responsive Window Elements CSS  --------------------*/
+@media (max-width: 700px) 
+{
+    body
+    {
+        background-color: #fff;
+    }
+
+    div 
+    {
+        width: auto;
+        margin: 0 auto;
+        border-radius: 0;
+        padding: 1em;
+    }
+}
+
+/*--------------------  Heading CSS  --------------------*/
+h1 
+{
+    margin: 10px;
+    text-align: center;
+}
+
+/*--------------------  Paragraph CSS  --------------------*/
+p {
+    text-align: center;
+  }
+
+  /*--------------------  Image CSS  --------------------*/
+img 
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/*--------------------  Play Button Div CSS  --------------------*/
+.play_button_div 
+{
+    display: flex;
+	justify-content: center;
+    background-color: #12181B;
+    width: 1000px;
+}
+
+/*--------------------  Black Button CSS  --------------------*/
+.black_play_button {
+    background-color: #000000; /* Black */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/*--------------------  Blue Button CSS  --------------------*/
+.blue_play_button {
+    background-color: #0145ff; /* Blue */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/*--------------------  Green Button CSS  --------------------*/
+.green_play_button {
+    background-color: #00ff00; /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/*--------------------  Navy Blue Button CSS  --------------------*/
+.navy_blue_play_button {
+    background-color: #0c00ba; /* Navy Blue */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/*--------------------  Orange Button CSS  --------------------*/
+.orange_play_button {
+    background-color: #ff7300; /* Orange */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/*--------------------  Red Button CSS  --------------------*/
+.red_play_button {
+    background-color: #ff0000; /* Red */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/*--------------------  White Button CSS  --------------------*/
+.white_play_button {
+    background-color: #ffffff; /* White */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/*--------------------  Yellow Button CSS  --------------------*/
+.yellow_play_button {
+    background-color: #e5ff00; /* Yellow */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/*--------------------  Quit Game Button CSS  --------------------*/
+.quit_button
+{
+    background-color: #f10b0b; /* Red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px 10px 100px;
+    cursor: pointer;
+}

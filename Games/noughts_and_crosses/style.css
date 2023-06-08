@@ -1,0 +1,89 @@
+/*--  This applies css styles to the entire page.  --*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*--  This applies css styles to the 'background' class only.  --*/
+.background{
+    background-image: url("../../Images/high_back.png");
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            padding-top: 1px;    
+}
+
+/*--  This applies css styles to the 'title'' class only.  --*/
+.title {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+}
+
+/*--  This applies css styles to the 'display' class only.  --*/
+.display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/*--  This css style enables the hiding of certain UI elements from viewby assigning them the class 'hide'.  --*/
+.hide {
+    display: none;
+}
+
+/*--  This applies css styles to the 'container' class only.  --*/
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
+
+/*--  This applies css styles to the 'tile' class only.  --*/
+.tile {
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/*--  This applies css styles to the 'playerX' class only.  --*/
+.playerX {
+    color: rgb(154, 1, 243);
+}
+
+/*--  This applies css styles to the 'playerO' class only.  --*/
+.playerO {
+    color: rgb(252, 206, 2);
+}
+
+/*--  This applies css styles to the 'controls' class only.  --*/
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+/*--  This applies css styles to the 'reset' button only.  --*/
+#reset {
+    background-color: red;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
